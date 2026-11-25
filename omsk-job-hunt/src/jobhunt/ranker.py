@@ -65,11 +65,32 @@ def by_distance(vacancies: Iterable[Vacancy], home: tuple[float, float] | None =
 RANKERS = {"date": by_date, "salary": by_salary}
 
 
+def dedupe(vacancies: Iterable[Vacancy]) -> list[Vacancy]:
+    """Склеивает повторы одной вакансии: та же должность, компания и зарплата.
+
+    Работодатели публикуют одну вакансию десятками копий, у каждой свой id.
+    """
+    seen = set()
+    unique = []
+    for vacancy in vacancies:
+        key = (
+            (vacancy.title or "").strip().lower(),
+            (vacancy.company or "").strip().lower(),
+            vacancy.salary_from,
+            vacancy.salary_to,
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(vacancy)
+    return unique
+
+
 def rank(vacancies: Iterable[Vacancy], mode: str, home: tuple[float, float] | None = None) -> list[Vacancy]:
     if mode == "distance":
-        return by_distance(vacancies, home)
+        return dedupe(by_distance(vacancies, home))
     try:
         ranker = RANKERS[mode]
     except KeyError:
         raise ValueError(f"unknown ranking mode: {mode}") from None
-    return ranker(vacancies)
+    return dedupe(ranker(vacancies))

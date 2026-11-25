@@ -91,3 +91,37 @@ def test_haversine_is_sane():
 
     # Омск — Москалёнки, ~59 км по прямой
     assert 55 < haversine_km(54.9893, 73.3682, 54.9400, 72.4500) < 62
+
+
+def test_rank_collapses_repeated_vacancies():
+    from jobhunt.ranker import rank
+
+    copies = [
+        V(key=f"superjob:{i}", source_id=str(i), title="Учитель математики", company="Профи-центр")
+        for i in range(5)
+    ]
+    assert len(rank(copies, "date")) == 1
+
+
+def test_rank_keeps_different_salaries():
+    from jobhunt.ranker import rank
+
+    a = V(key="a", title="Менеджер", company="Билайн", salary_from=48000)
+    b = V(key="b", title="Менеджер", company="Билайн", salary_from=60000)
+    assert len(rank([a, b], "salary")) == 2
+
+
+def test_rank_dedupe_keeps_newest_for_date_mode():
+    from jobhunt.ranker import rank
+
+    old = V(key="old", published_at="2026-11-01")
+    new = V(key="new", published_at="2026-11-25")
+    assert [v.key for v in rank([old, new], "date")] == ["new"]
+
+
+def test_rank_dedupe_across_sources():
+    from jobhunt.ranker import rank
+
+    sj = V(key="superjob:1", source="superjob", title="Оператор", company="ООО Ромашка")
+    tv = V(key="trudvsem:1", source="trudvsem", title="Оператор", company="ООО Ромашка")
+    assert [v.source for v in rank([sj, tv], "date")] == ["superjob"]

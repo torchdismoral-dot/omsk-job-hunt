@@ -114,3 +114,51 @@ def test_drop_word_in_description_removes_vacancy(cfg):
     assert not is_relevant(
         V(title="Оператор", description="Работа вахтовый метод, 60/30", salary_from=90000), cfg
     )
+
+
+def test_blue_collar_title_removed(cfg):
+    assert not is_relevant(V(title="Мастер отделочных работ", salary_from=270000), cfg)
+
+
+def test_cashier_title_removed(cfg):
+    assert not is_relevant(V(title="Продавец-кассир", salary_from=44690), cfg)
+
+
+def test_abroad_title_removed(cfg):
+    assert not is_relevant(V(title="Машинист бетононасоса (Египет)", salary_from=200000), cfg)
+
+
+def test_blue_collar_word_in_description_does_not_drop_office_job(cfg):
+    v = V(
+        title="Специалист клиентского сервиса",
+        company="Банк ВТБ (ПАО)",
+        description="Обслуживание клиентов, оформление кредитов, работа с мастер-планом",
+        salary_from=50100,
+    )
+    assert is_relevant(v, cfg)
+
+
+def test_bank_cashier_kept(cfg):
+    assert is_relevant(V(title="Кассир-операционист", company="Банк", salary_from=45000), cfg)
+
+
+HOME = (54.9893, 73.3682)
+
+
+def test_job_in_far_region_dropped(cfg):
+    # Владивосток: SuperJob пишет «Омск», но координаты настоящие
+    v = V(title="Электромеханик", lat=43.1155, lng=131.8855, salary_from=120000)
+    assert not is_relevant(v, cfg, HOME)
+
+
+def test_job_near_home_kept(cfg):
+    assert is_relevant(V(salary_from=50000, lat=54.9900, lng=73.3700), cfg, HOME)
+
+
+def test_far_remote_job_kept(cfg):
+    v = V(is_remote=True, lat=43.1155, lng=131.8855, salary_from=120000)
+    assert is_relevant(v, cfg, HOME)
+
+
+def test_job_without_coordinates_kept(cfg):
+    assert is_relevant(V(salary_from=50000), cfg, HOME)

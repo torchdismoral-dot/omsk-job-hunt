@@ -20,6 +20,55 @@ DEFAULT_ALLOWED_EXPERIENCE = ("Без опыта", "Не имеет значен
 
 DEFAULT_DROP_WORDS = ("военнослужащ", "по контракту", "беспилотн", "вахт")
 
+# Отсев по названию вакансии: рабочие специальности и заграничные стройки.
+DEFAULT_TITLE_DROP_WORDS = (
+    "мастер",
+    "машинист",
+    "сварщик",
+    "бетон",
+    "отделоч",
+    "прораб",
+    "водител",
+    "грузчик",
+    "электрик",
+    "сантехник",
+    "монтажник",
+    "стропальщик",
+    "разнорабоч",
+    "уборщик",
+    "арматур",
+    "маляр",
+    "штукатур",
+    "слесар",
+    "повар",
+    "пекар",
+    "продавец",
+    "охранник",
+    "кладовщик",
+    "дворник",
+    "курьер",
+    "доставк",
+    "сборщик заказ",
+    "рабочий",
+    "учител",
+    "преподавател",
+    "педагог",
+    "воспитател",
+    "репетитор",
+    "врач",
+    "медицин",
+    "фельдшер",
+    "медсестр",
+    "поликлиник",
+    "стоматолог",
+    "фармацевт",
+    "санитар",
+    "египет",
+    "сирия",
+    "африка",
+    "китай",
+)
+
 
 def load_dotenv(path: str | Path = ".env") -> None:
     """Мини-замена python-dotenv: только KEY=VALUE, окружение не перезаписывает."""
@@ -41,7 +90,9 @@ class FilterConfig:
     allowed_experience: tuple[str, ...] = DEFAULT_ALLOWED_EXPERIENCE
     stop_words: tuple[str, ...] = DEFAULT_STOP_WORDS
     drop_words: tuple[str, ...] = DEFAULT_DROP_WORDS
+    title_drop_words: tuple[str, ...] = DEFAULT_TITLE_DROP_WORDS
     exclude_companies: tuple[str, ...] = ()
+    max_distance_km: float = 150.0
 
 
 @dataclass
@@ -109,6 +160,11 @@ def load_config(path: str | Path = "config.yaml") -> Settings:
         settings.filters.stop_words = tuple(filt["stop_words"])
     if "drop_words" in filt:
         settings.filters.drop_words = tuple(filt["drop_words"] or ())
+    if "title_drop_words" in filt:
+        settings.filters.title_drop_words = tuple(filt["title_drop_words"] or ())
+    settings.filters.max_distance_km = float(
+        filt.get("max_distance_km", settings.filters.max_distance_km)
+    )
     settings.filters.exclude_companies = tuple(filt.get("exclude_companies") or ())
 
     home = data.get("home") or {}

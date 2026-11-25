@@ -24,7 +24,7 @@ def build(raw_superjob, raw_trudvsem, settings: Settings) -> list[Vacancy]:
             return
         seen.add(vacancy.key)
         vacancy.red_flags = find_flags(vacancy, settings.filters.stop_words)
-        if is_relevant(vacancy, settings.filters):
+        if is_relevant(vacancy, settings.filters, settings.home):
             result.append(vacancy)
 
     for obj in raw_superjob:
