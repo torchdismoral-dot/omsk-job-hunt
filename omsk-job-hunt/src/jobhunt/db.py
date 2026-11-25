@@ -177,6 +177,32 @@ class DB:
         )
         self.conn.commit()
 
+    def subscribe(self, chat_id: int) -> None:
+        self.conn.execute(
+            """INSERT INTO subscriptions (chat_id, created_at, active) VALUES (?, ?, 1)
+               ON CONFLICT(chat_id) DO UPDATE SET active = 1""",
+            (chat_id, _now()),
+        )
+        self.conn.commit()
+
+    def unsubscribe(self, chat_id: int) -> None:
+        self.conn.execute(
+            "UPDATE subscriptions SET active = 0 WHERE chat_id = ?", (chat_id,)
+        )
+        self.conn.commit()
+
+    def is_subscribed(self, chat_id: int) -> bool:
+        row = self.conn.execute(
+            "SELECT 1 FROM subscriptions WHERE chat_id = ? AND active = 1", (chat_id,)
+        ).fetchone()
+        return row is not None
+
+    def subscribers(self) -> list[int]:
+        rows = self.conn.execute(
+            "SELECT chat_id FROM subscriptions WHERE active = 1 ORDER BY chat_id"
+        ).fetchall()
+        return [row["chat_id"] for row in rows]
+
     def count(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM vacancies").fetchone()[0]
 

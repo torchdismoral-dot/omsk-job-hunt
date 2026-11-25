@@ -9,6 +9,7 @@ from aiogram.types import CallbackQuery, Message
 from ..config import Settings
 from ..db import DB
 from ..ranker import rank
+from .digest import send_digest
 from .keyboards import MODE_LABELS, modes_keyboard, more_keyboard
 from .messages import render_pages
 
@@ -44,9 +45,39 @@ def build_router(settings: Settings, db_path: str) -> Router:
     async def start(message: Message) -> None:
         await message.answer(
             "Привет. Собираю вакансии без опыта по Омску и удалёнке. "
-            "Выбери, как отсортировать.",
+            "Выбери, как отсортировать.\n\n"
+            "/subscribe — присылать новые раз в 2 дня.",
             reply_markup=modes_keyboard(),
         )
+
+    @router.message(Command("subscribe"))
+    async def subscribe(message: Message) -> None:
+        db = DB(db_path)
+        try:
+            db.subscribe(message.chat.id)
+            sent = await send_digest(message.bot, db, settings, message.chat.id)
+        finally:
+            db.close()
+        if sent:
+            await message.answer(
+                f"Подписка включена. Это первые {sent} — дальше раз в "
+                f"{settings.digest_hours} ч буду присылать только новое. "
+                "/unsubscribe — отключить."
+            )
+        else:
+            await message.answer(
+                f"Подписка включена. Нового пока нет — пришлю раз в "
+                f"{settings.digest_hours} ч, если появится."
+            )
+
+    @router.message(Command("unsubscribe"))
+    async def unsubscribe(message: Message) -> None:
+        db = DB(db_path)
+        try:
+            db.unsubscribe(message.chat.id)
+        finally:
+            db.close()
+        await message.answer("Подписка выключена. /subscribe — вернуть.")
 
     @router.message(Command("top"))
     async def top(message: Message) -> None:

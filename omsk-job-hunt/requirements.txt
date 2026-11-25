@@ -1,5 +1,6 @@
 pyyaml>=6.0
 aiogram>=3.20
+apscheduler>=3.10
 
 # dev
 pytest>=8.0

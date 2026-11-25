@@ -112,6 +112,7 @@ class Settings:
     town_omsk: int = 17
     remote_keywords: tuple[str, ...] = ()
     top_n: int = 10
+    digest_hours: int = 48
     home_lat: float | None = None
     home_lng: float | None = None
     sources: SourcesConfig = field(default_factory=SourcesConfig)
@@ -173,4 +174,6 @@ def load_config(path: str | Path = "config.yaml") -> Settings:
         settings.home_lng = float(home["lng"])
 
     settings.top_n = int((data.get("rank") or {}).get("top_n", settings.top_n))
+    bot = data.get("bot") or {}
+    settings.digest_hours = int(bot.get("digest_hours", settings.digest_hours))
     return settings
