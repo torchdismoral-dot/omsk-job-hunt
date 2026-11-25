@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>moralcode: OmskJobHunter</title>
+<meta name="description" content="OmskJobHunter собирает вакансии без опыта по Омску и удалёнке из открытых источников и присылает новые в Telegram.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="moralcode: OmskJobHunter">
+<meta property="og:description" content="Помощник по поиску работы в Омске: собирает вакансии, отсекает неподходящее, присылает только новые.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e6257'/%3E%3Ctext x='16' y='23' font-family='Segoe UI,sans-serif' font-size='19' font-weight='700' fill='%23ffffff' text-anchor='middle'%3Em%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #f4f6f6;
+    --surface: #fbfcfc;
+    --ink: #111418;
+    --muted: #59606a;
+    --line: #d9dddd;
+    --accent: #0e6257;
+    --accent-hover: #0a4f46;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e1112;
+      --surface: #151a1b;
+      --ink: #eef1f0;
+      --muted: #9aa3a6;
+      --line: #232a2b;
+      --accent: #5cc4b0;
+      --accent-hover: #7ad2c1;
+      --on-accent: #07100e;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.site { border-bottom: 1px solid var(--line); }
+  header.site .wrap { display: flex; align-items: center; height: 64px; }
+  .brand {
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    gap: 56px;
+    align-items: start;
+    padding: 72px 0 64px;
+  }
+
+  h1 {
+    font-size: clamp(34px, 4.8vw, 58px);
+    line-height: 1.03;
+    letter-spacing: -0.035em;
+    font-weight: 640;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+
+  .lead {
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 40ch;
+    margin: 0 0 28px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color .18s ease, transform .18s ease;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 6px;
+  }
+  .panel h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  .panel ul { list-style: none; margin: 0; padding: 0; }
+  .panel li {
+    padding: 9px 0;
+    font-size: 15.5px;
+    border-top: 1px solid var(--line);
+  }
+  .panel li:first-child { border-top: 0; padding-top: 0; }
+
+  section.block { padding: 56px 0; border-top: 1px solid var(--line); }
+  section.block h2 {
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    font-weight: 640;
+    margin: 0 0 24px;
+  }
+
+  .flow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .flow li { border-top: 2px solid var(--ink); padding-top: 16px; }
+  .flow h3 { font-size: 17px; margin: 0 0 8px; font-weight: 640; }
+  .flow p { margin: 0; font-size: 15.5px; color: var(--muted); }
+
+  .block > p { max-width: 62ch; margin: 0 0 16px; }
+  .block > p:last-child { margin-bottom: 0; }
+
+  .links { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 28px; }
+  .links a { font-weight: 550; }
+
+  footer.site { border-top: 1px solid var(--line); padding: 28px 0 40px; }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: baseline; }
+  footer.site span { color: var(--muted); font-size: 14.5px; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 36px; padding: 44px 0 48px; }
+    h1 { max-width: 22ch; }
+    .panel { margin-top: 0; }
+    .flow { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">moralcode</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div>
+      <h1>Вакансии для старта, без ручного поиска</h1>
+      <p class="lead">OmskJobHunter раз в два дня проверяет открытые источники, отсекает неподходящее и присылает новые вакансии в Telegram.</p>
+      <a class="btn" href="#contact">Связаться</a>
+    </div>
+
+    <aside class="panel">
+      <h2>Чего в подборке не будет</h2>
+      <ul>
+        <li>Продажи и холодные звонки</li>
+        <li>Колл-центры и телемаркетинг</li>
+        <li>Вакансии ниже порога по зарплате</li>
+        <li>То, что уже присылали раньше</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="block">
+    <h2>Как это работает</h2>
+    <ol class="flow">
+      <li>
+        <h3>Сбор</h3>
+        <p>Запросы к API SuperJob и открытым данным портала «Работа России» по Омску и удалённой работе.</p>
+      </li>
+      <li>
+        <h3>Отбор</h3>
+        <p>Опыт работы, зарплата, район города, стоп-слова. Повторы отсекаются по идентификатору вакансии.</p>
+      </li>
+      <li>
+        <h3>Отправка</h3>
+        <p>Только новые вакансии, раз в 48 часов, в личный чат Telegram. Пустая подборка не приходит.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Источники</h2>
+    <p>Проект работает на официальных каналах: открытом API SuperJob и открытых данных портала «Работа России». Публичные сайты не парсятся, защиты не обходятся.</p>
+    <ul class="links">
+      <li><a href="https://api.superjob.ru/">API SuperJob</a></li>
+      <li><a href="https://trudvsem.ru/">Работа России</a></li>
+    </ul>
+  </section>
+
+  <section class="block" id="contact">
+    <h2>О проекте</h2>
+    <p>Личный некоммерческий проект Алексея Савченко. Сделан для собственного поиска работы. Это не кадровое агентство, доступ к подборке не продаётся.</p>
+    <p>Связаться: <a href="https://t.me/YOUR_TELEGRAM">@YOUR_TELEGRAM</a></p>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>moralcode</span>
+    <span>2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
