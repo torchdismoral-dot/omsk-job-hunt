@@ -1,0 +1,34 @@
+superjob:
+  base_url: "https://api.superjob.ru/2.0"
+  key_env: SUPERJOB_KEY
+  page_size: 40
+  delay_ms: 300
+
+trudvsem:
+  base_url: "https://opendata.trudvsem.ru/api/v1"
+  region: "5500000000000"
+  max_records: 150
+
+search:
+  town_omsk: 17
+  remote_keywords: [помощник, оператор, младший, стажёр, junior, поддержка]
+
+# Координаты "дома" для сортировки по близости. Сейчас — центр Омска, поменяй под себя.
+home:
+  lat: 54.9893
+  lng: 73.3682
+
+filter:
+  salary_min: 40000
+  keep_unknown_salary: true
+  allowed_experience: [Без опыта, Не имеет значения, От 1 года]
+  stop_words: [продаж, холодные звонки, колл-центр, call-центр, взыскан, телемаркетинг, без оплаты, оплата по результату]
+  drop_words: [военнослужащ, по контракту, беспилотн, вахт]
+  exclude_companies: []
+
+rank:
+  top_n: 10
+
+bot:
+  token_env: BOT_TOKEN
+  digest_hours: 48

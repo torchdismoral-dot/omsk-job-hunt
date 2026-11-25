@@ -1,0 +1,17 @@
+# секреты
+.env
+.env.*
+!.env.example
+keySuperJob.txt
+
+# логи и локальные данные
+*.log
+*.err.log
+*.db
+*.sqlite3
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
