@@ -1,0 +1,18 @@
+# Конфиг Amvera Cloud (бот на long polling, HTTP-порт не слушает).
+# Ключи проверены по примерам реальных проектов; если панель попросит иначе —
+# те же значения задаются в интерфейсе, файл не единственный способ.
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: "3.11"
+
+build:
+  requirementsPath: requirements.txt
+
+run:
+  # main.py сам добавляет src/ в sys.path: команда не зависит от shell и PYTHONPATH.
+  # Запуск из корня проекта — config.yaml и пути к БД отсчитываются от рабочего каталога.
+  command: python main.py
+  # Постоянный диск. Без него база вакансий и FSM обнуляются при каждом деплое.
+  persistenceMount: /data

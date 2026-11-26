@@ -3,8 +3,8 @@ import asyncio
 import pytest
 from aiogram.exceptions import TelegramNetworkError
 
-from jobhunt.bot.app import poll_forever
-from jobhunt.bot.keyboards import more_keyboard, modes_keyboard
+from jobhunt.bot.app import describe_update, poll_forever
+from jobhunt.bot.keyboards import main_menu_keyboard, more_keyboard
 from jobhunt.bot.messages import render_pages, vacancy_html
 from jobhunt.normalize import Vacancy
 
@@ -62,9 +62,33 @@ def test_page_fits_telegram_limit():
 
 
 def test_modes_keyboard_callbacks():
-    keyboard = modes_keyboard()
-    data = [button.callback_data for row in keyboard.inline_keyboard for button in row]
-    assert data == ["top:date", "top:salary", "top:distance"]
+    keyboard = main_menu_keyboard()
+    first_row = [button.callback_data for button in keyboard.inline_keyboard[0]]
+    assert first_row == ["top:date", "top:salary", "top:distance"]
+
+
+def test_digest_toggle_button_reflects_state():
+    on = [button.text for row in main_menu_keyboard(True).inline_keyboard for button in row]
+    off = [button.text for row in main_menu_keyboard(False).inline_keyboard for button in row]
+    assert "🔔 Рассылка: вкл" in on
+    assert "🔕 Рассылка: выкл" in off
+    callbacks = [
+        button.callback_data
+        for row in main_menu_keyboard(False).inline_keyboard
+        for button in row
+    ]
+    assert "digest:toggle" in callbacks
+
+
+def test_next_at_is_today_or_tomorrow():
+    from datetime import datetime
+
+    from jobhunt.bot.app import next_at
+
+    now = datetime(2026, 11, 26, 8, 0)
+    assert next_at(9, 5, now) == datetime(2026, 11, 26, 9, 5)
+    late = datetime(2026, 11, 26, 10, 0)
+    assert next_at(9, 5, late) == datetime(2026, 11, 27, 9, 5)
 
 
 def test_more_keyboard_callback():
@@ -94,3 +118,45 @@ def test_poll_forever_does_not_hide_token_errors():
 
     with pytest.raises(RuntimeError, match="Unauthorized"):
         asyncio.run(poll_forever(object(), BrokenDispatcher(), delay=0))
+
+
+def test_describe_update_logs_message_text():
+    from aiogram.types import Update
+
+    update = Update.model_validate(
+        {
+            "update_id": 1,
+            "message": {
+                "message_id": 1,
+                "date": 0,
+                "chat": {"id": 5, "type": "private"},
+                "from": {"id": 5, "is_bot": False, "first_name": "A"},
+                "text": "/start",
+            },
+        }
+    )
+    assert describe_update(update) == "message chat=5 text='/start'"
+
+
+def test_describe_update_logs_callback_data():
+    from aiogram.types import Update
+
+    update = Update.model_validate(
+        {
+            "update_id": 2,
+            "callback_query": {
+                "id": "2",
+                "from": {"id": 5, "is_bot": False, "first_name": "A"},
+                "chat_instance": "x",
+                "data": "settings",
+                "message": {
+                    "message_id": 2,
+                    "date": 0,
+                    "chat": {"id": 5, "type": "private"},
+                    "from": {"id": 42, "is_bot": True, "first_name": "Bot"},
+                    "text": "menu",
+                },
+            },
+        }
+    )
+    assert describe_update(update) == "callback chat=5 data='settings'"

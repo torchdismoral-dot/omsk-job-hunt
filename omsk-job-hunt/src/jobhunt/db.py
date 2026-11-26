@@ -2,10 +2,22 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 
 from .normalize import Vacancy
+
+
+@dataclass
+class UserSettings:
+    user_id: int
+    city: str | None = "Омск"
+    remote: bool = False
+    stop_words: tuple[str, ...] = ()
+    job_types: tuple[str, ...] = ()
+    min_salary: int = 40000
+    digest_enabled: bool = True
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS vacancies (
@@ -32,18 +44,30 @@ CREATE TABLE IF NOT EXISTS vacancies (
   raw             TEXT
 );
 
-CREATE TABLE IF NOT EXISTS sent (
-  vacancy_key TEXT NOT NULL,
-  chat_id     INTEGER NOT NULL,
-  kind        TEXT NOT NULL,
-  sent_at     TEXT NOT NULL,
-  PRIMARY KEY (vacancy_key, chat_id, kind)
+CREATE TABLE IF NOT EXISTS sent_vacancies (
+  user_id    INTEGER NOT NULL,
+  vacancy_id TEXT NOT NULL,
+  sent_at    TEXT NOT NULL,
+  PRIMARY KEY (user_id, vacancy_id)
 );
 
-CREATE TABLE IF NOT EXISTS subscriptions (
-  chat_id    INTEGER PRIMARY KEY,
-  created_at TEXT NOT NULL,
-  active     INTEGER NOT NULL DEFAULT 1
+CREATE TABLE IF NOT EXISTS user_settings (
+  user_id        INTEGER PRIMARY KEY,
+  city           TEXT,
+  remote         INTEGER NOT NULL DEFAULT 0,
+  stop_words     TEXT NOT NULL DEFAULT '[]',
+  job_types      TEXT NOT NULL DEFAULT '[]',
+  min_salary     INTEGER NOT NULL DEFAULT 40000,
+  digest_enabled INTEGER NOT NULL DEFAULT 1,
+  updated_at     TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS donations (
+  id                        INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id                   INTEGER NOT NULL,
+  amount                    INTEGER NOT NULL,
+  telegram_payment_charge_id TEXT NOT NULL UNIQUE,
+  created_at                TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS runs (
@@ -64,6 +88,16 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _words(raw) -> tuple[str, ...]:
+    try:
+        values = json.loads(raw or "[]")
+    except (TypeError, ValueError):
+        return ()
+    if not isinstance(values, list):
+        return ()
+    return tuple(str(word) for word in values)
+
+
 class DB:
     def __init__(self, path: str | Path = "jobhunt.db"):
         self.path = str(path)
@@ -81,6 +115,27 @@ class DB:
         for column, decl in (("description", "TEXT"), ("lat", "REAL"), ("lng", "REAL")):
             if column not in have:
                 self.conn.execute(f"ALTER TABLE vacancies ADD COLUMN {column} {decl}")
+
+        settings_columns = {
+            row[1] for row in self.conn.execute("PRAGMA table_info(user_settings)")
+        }
+        if "digest_enabled" not in settings_columns:
+            self.conn.execute(
+                "ALTER TABLE user_settings ADD COLUMN digest_enabled INTEGER NOT NULL DEFAULT 1"
+            )
+        if "job_types" not in settings_columns:
+            self.conn.execute(
+                "ALTER TABLE user_settings ADD COLUMN job_types TEXT NOT NULL DEFAULT '[]'"
+            )
+
+        sent_columns = {
+            row[1] for row in self.conn.execute("PRAGMA table_info(sent)")
+        }
+        if sent_columns:
+            self.conn.execute(
+                """INSERT OR IGNORE INTO sent_vacancies (user_id, vacancy_id, sent_at)
+                   SELECT chat_id, vacancy_key, sent_at FROM sent"""
+            )
 
     def upsert(self, vacancy: Vacancy) -> bool:
         """True, если вакансия встретилась впервые."""
@@ -157,51 +212,117 @@ class DB:
         ).fetchall()
         return [self._to_vacancy(row) for row in rows]
 
-    def unsent(self, chat_id: int) -> list[Vacancy]:
+    def unsent(self, user_id: int) -> list[Vacancy]:
         rows = self.conn.execute(
             """SELECT * FROM vacancies
                WHERE key NOT IN (
-                 SELECT vacancy_key FROM sent WHERE chat_id = ?
+                 SELECT vacancy_id FROM sent_vacancies WHERE user_id = ?
                )
                ORDER BY published_at DESC""",
-            (chat_id,),
+            (user_id,),
         ).fetchall()
         return [self._to_vacancy(row) for row in rows]
 
-    def mark_sent(self, keys, chat_id: int, kind: str = "digest") -> None:
+    def mark_sent(self, keys, user_id: int) -> None:
         now = _now()
         self.conn.executemany(
-            "INSERT OR IGNORE INTO sent (vacancy_key, chat_id, kind, sent_at) "
-            "VALUES (?, ?, ?, ?)",
-            [(key, chat_id, kind, now) for key in keys],
+            "INSERT OR IGNORE INTO sent_vacancies (user_id, vacancy_id, sent_at) "
+            "VALUES (?, ?, ?)",
+            [(user_id, key, now) for key in keys],
         )
         self.conn.commit()
 
-    def subscribe(self, chat_id: int) -> None:
+    def set_digest_enabled(self, user_id: int, enabled: bool) -> None:
         self.conn.execute(
-            """INSERT INTO subscriptions (chat_id, created_at, active) VALUES (?, ?, 1)
-               ON CONFLICT(chat_id) DO UPDATE SET active = 1""",
-            (chat_id, _now()),
+            "UPDATE user_settings SET digest_enabled = ?, updated_at = ? WHERE user_id = ?",
+            (int(enabled), _now(), user_id),
         )
         self.conn.commit()
 
-    def unsubscribe(self, chat_id: int) -> None:
-        self.conn.execute(
-            "UPDATE subscriptions SET active = 0 WHERE chat_id = ?", (chat_id,)
-        )
-        self.conn.commit()
-
-    def is_subscribed(self, chat_id: int) -> bool:
+    def get_user_settings(self, user_id: int) -> UserSettings | None:
         row = self.conn.execute(
-            "SELECT 1 FROM subscriptions WHERE chat_id = ? AND active = 1", (chat_id,)
+            "SELECT * FROM user_settings WHERE user_id = ?", (user_id,)
+        ).fetchone()
+        if row is None:
+            return None
+        return UserSettings(
+            user_id=row["user_id"],
+            city=row["city"],
+            remote=bool(row["remote"]),
+            stop_words=_words(row["stop_words"]),
+            job_types=_words(row["job_types"]),
+            min_salary=row["min_salary"],
+            digest_enabled=bool(row["digest_enabled"]),
+        )
+
+    def save_user_settings(self, prefs: UserSettings) -> None:
+        self.conn.execute(
+            """INSERT INTO user_settings
+                 (user_id, city, remote, stop_words, job_types, min_salary,
+                  digest_enabled, updated_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+               ON CONFLICT(user_id) DO UPDATE SET
+                 city = excluded.city,
+                 remote = excluded.remote,
+                 stop_words = excluded.stop_words,
+                 job_types = excluded.job_types,
+                 min_salary = excluded.min_salary,
+                 digest_enabled = excluded.digest_enabled,
+                 updated_at = excluded.updated_at""",
+            (
+                prefs.user_id,
+                prefs.city,
+                int(prefs.remote),
+                json.dumps(list(prefs.stop_words), ensure_ascii=False),
+                json.dumps(list(prefs.job_types), ensure_ascii=False),
+                prefs.min_salary,
+                int(prefs.digest_enabled),
+                _now(),
+            ),
+        )
+        self.conn.commit()
+
+    def has_user_settings(self, user_id: int) -> bool:
+        row = self.conn.execute(
+            "SELECT 1 FROM user_settings WHERE user_id = ?", (user_id,)
         ).fetchone()
         return row is not None
 
-    def subscribers(self) -> list[int]:
+    def delete_user_settings(self, user_id: int) -> None:
+        self.conn.execute("DELETE FROM user_settings WHERE user_id = ?", (user_id,))
+        self.conn.commit()
+
+    def digest_recipients(self) -> list[UserSettings]:
+        """Все, кто прошёл онбординг и не отключил рассылку."""
         rows = self.conn.execute(
-            "SELECT chat_id FROM subscriptions WHERE active = 1 ORDER BY chat_id"
+            "SELECT user_id FROM user_settings WHERE digest_enabled = 1 ORDER BY user_id"
         ).fetchall()
-        return [row["chat_id"] for row in rows]
+        recipients = []
+        for row in rows:
+            prefs = self.get_user_settings(row["user_id"])
+            if prefs is not None:
+                recipients.append(prefs)
+        return recipients
+
+    def add_donation(self, user_id: int, amount: int, charge_id: str) -> bool:
+        """False, если платёж с таким charge_id уже записан (повтор от Telegram)."""
+        cursor = self.conn.execute(
+            """INSERT OR IGNORE INTO donations
+                 (user_id, amount, telegram_payment_charge_id, created_at)
+               VALUES (?, ?, ?, ?)""",
+            (user_id, amount, charge_id, _now()),
+        )
+        self.conn.commit()
+        return cursor.rowcount > 0
+
+    def donations_total(self) -> tuple[int, int]:
+        row = self.conn.execute(
+            "SELECT COUNT(*), COALESCE(SUM(amount), 0) FROM donations"
+        ).fetchone()
+        return row[0], row[1]
+
+    def users_count(self) -> int:
+        return self.conn.execute("SELECT COUNT(*) FROM user_settings").fetchone()[0]
 
     def count(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM vacancies").fetchone()[0]

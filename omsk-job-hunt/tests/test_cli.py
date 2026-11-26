@@ -44,3 +44,44 @@ def test_remote_and_district_shown():
 
 def test_red_flags_printed():
     assert "⚑ продаж" in format_vacancy(1, V(red_flags=["продаж"]))
+
+
+def test_stats_command_reports_totals(tmp_path, capsys):
+    from jobhunt.cli import main
+    from jobhunt.db import DB, UserSettings
+
+    db_path = tmp_path / "s.db"
+    db = DB(db_path)
+    db.upsert(
+        Vacancy(key="superjob:1", source="superjob", source_id="1", title="Оператор", url="https://e.org/1")
+    )
+    db.upsert(
+        Vacancy(key="superjob:2", source="superjob", source_id="2", title="Курьер", url="https://e.org/2")
+    )
+    db.save_user_settings(UserSettings(user_id=1))
+    db.save_user_settings(UserSettings(user_id=2))
+    db.add_donation(1, 100, "charge-1")
+    db.add_donation(2, 50, "charge-2")
+    db.close()
+
+    code = main(
+        ["--config", str(tmp_path / "none.yaml"), "stats", "--db", str(db_path)]
+    )
+    out = capsys.readouterr().out
+    assert code == 0
+    assert "Пользователей: 2" in out
+    assert "Вакансий в базе: 2" in out
+    assert "150 Stars" in out
+
+
+def test_stats_command_on_empty_db(tmp_path, capsys):
+    from jobhunt.cli import main
+
+    code = main(
+        ["--config", str(tmp_path / "none.yaml"), "stats", "--db", str(tmp_path / "empty.db")]
+    )
+    out = capsys.readouterr().out
+    assert code == 0
+    assert "Пользователей: 0" in out
+    assert "Вакансий в базе: 0" in out
+    assert "0 Stars" in out

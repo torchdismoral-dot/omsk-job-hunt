@@ -44,6 +44,9 @@ def _parser() -> argparse.ArgumentParser:
 
     refresh = sub.add_parser("refresh", help="забрать вакансии из API и сохранить")
     refresh.add_argument("--db", default="jobhunt.db")
+
+    stats = sub.add_parser("stats", help="показать сводку по базе и донатам")
+    stats.add_argument("--db", default="jobhunt.db")
     return parser
 
 
@@ -60,6 +63,19 @@ def main(argv=None) -> int:
             f"получено {stats['fetched']}, подошло {stats['relevant']}, "
             f"новых {stats['fresh']}, всего в базе {stats['total']}"
         )
+        return 0
+
+    if args.command == "stats":
+        db = DB(args.db)
+        try:
+            users = db.users_count()
+            vacancies = db.count()
+            payments, stars = db.donations_total()
+        finally:
+            db.close()
+        print(f"Пользователей: {users}")
+        print(f"Вакансий в базе: {vacancies}")
+        print(f"Донаты: {payments} платежей, {stars} Stars")
         return 0
 
     if args.command == "top":

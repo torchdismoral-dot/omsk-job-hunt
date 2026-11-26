@@ -2,7 +2,7 @@ import asyncio
 
 from jobhunt.bot.digest import pick, send_digest, send_digests
 from jobhunt.config import Settings
-from jobhunt.db import DB
+from jobhunt.db import DB, UserSettings
 from jobhunt.normalize import Vacancy
 
 
@@ -31,29 +31,18 @@ class FakeBot:
         self.messages.append((chat_id, text))
 
 
-def test_subscribe_and_unsubscribe():
+def test_digest_recipients_are_users_with_settings():
     db = DB(":memory:")
-    assert db.subscribers() == []
-    db.subscribe(42)
-    assert db.is_subscribed(42)
-    assert db.subscribers() == [42]
-    db.unsubscribe(42)
-    assert not db.is_subscribed(42)
-    assert db.subscribers() == []
-
-
-def test_repeated_subscribe_keeps_single_row():
-    db = DB(":memory:")
-    db.subscribe(42)
-    db.subscribe(42)
-    assert db.subscribers() == [42]
+    db.save_user_settings(UserSettings(user_id=42))
+    db.save_user_settings(UserSettings(user_id=43, digest_enabled=False))
+    assert [prefs.user_id for prefs in db.digest_recipients()] == [42]
 
 
 def test_pick_returns_newest_unsent():
     db = DB(":memory:")
     for n in (1, 2, 3):
         db.upsert(V(n))
-    chosen = pick(db, Settings(), chat_id=42, limit=2)
+    chosen = pick(db, Settings(), user_id=42, limit=2)
     assert [v.source_id for v in chosen] == ["3", "2"]
 
 
@@ -91,14 +80,21 @@ def test_sent_for_one_chat_does_not_hide_from_another():
     assert len(db.unsent(99)) == 1
 
 
-def test_send_digests_goes_only_to_subscribers():
+def test_send_digests_goes_only_to_enabled_users():
     db = DB(":memory:")
     db.upsert(V(1))
-    db.subscribe(42)
+    db.save_user_settings(UserSettings(user_id=42))
+    db.save_user_settings(UserSettings(user_id=43, digest_enabled=False))
     bot = FakeBot()
     total = asyncio.run(send_digests(bot, db, Settings()))
     assert total == 1
     assert bot.messages[0][0] == 42
+
+
+def test_send_digests_skips_users_without_settings():
+    db = DB(":memory:")
+    db.upsert(V(1))
+    assert asyncio.run(send_digests(FakeBot(), db, Settings())) == 0
 
 
 def test_digest_job_refreshes_and_sends(tmp_path):
@@ -106,7 +102,7 @@ def test_digest_job_refreshes_and_sends(tmp_path):
 
     path = str(tmp_path / "t.db")
     db = DB(path)
-    db.subscribe(42)
+    db.save_user_settings(UserSettings(user_id=42))
     db.close()
 
     def fake_refresh(settings, db):
@@ -125,7 +121,7 @@ def test_digest_job_survives_failed_refresh(tmp_path):
     path = str(tmp_path / "t.db")
     db = DB(path)
     db.upsert(V(1))
-    db.subscribe(42)
+    db.save_user_settings(UserSettings(user_id=42))
     db.close()
 
     def broken_refresh(settings, db):
@@ -134,3 +130,28 @@ def test_digest_job_survives_failed_refresh(tmp_path):
     bot = FakeBot()
     sent = asyncio.run(digest_job(bot, Settings(), path, refresh_fn=broken_refresh))
     assert sent == 1
+
+
+def test_refresh_job_returns_stats(tmp_path):
+    from jobhunt.bot.app import refresh_job
+
+    path = str(tmp_path / "t.db")
+    DB(path).close()
+
+    def fake_refresh(settings, db):
+        return {"fetched": 3, "fresh": 1}
+
+    stats = asyncio.run(refresh_job(Settings(), path, refresh_fn=fake_refresh))
+    assert stats == {"fetched": 3, "fresh": 1}
+
+
+def test_refresh_job_swallows_errors(tmp_path):
+    from jobhunt.bot.app import refresh_job
+
+    path = str(tmp_path / "t.db")
+    DB(path).close()
+
+    def broken(settings, db):
+        raise RuntimeError("нет сети")
+
+    assert asyncio.run(refresh_job(Settings(), path, refresh_fn=broken)) is None

@@ -1,10 +1,63 @@
 from __future__ import annotations
 
+import re
+
 from .config import FilterConfig
+from .db import UserSettings
 from .normalize import Vacancy
 from .ranker import haversine_km
 
 HOME_CITY = "омск"
+
+# Ключ -> (подпись кнопки, шаблон по названию вакансии)
+SPHERES: dict[str, tuple[str, re.Pattern[str]]] = {
+    "banking": (
+        "💼 Банки и финансы",
+        re.compile(
+            r"банк|кредит|финанс|бухгалтер|кассир|операционист|бэк-офис"
+            r"|экономист|страхов|физических лиц"
+        ),
+    ),
+    "it": (
+        "💻 IT и интернет",
+        re.compile(
+            r"\bit\b|айти|тестировщик|qa|программист|разработчик|хелпдеск"
+            r"|helpdesk|системный админ|аналитик данных|support"
+        ),
+    ),
+    "support": (
+        "📞 Клиентский сервис",
+        re.compile(
+            r"поддержк|клиентск|оператор.*(?:чат|связи)|сервис|vip"
+            r"|обслуживан\w*\s+(?:физических лиц|клиентов)"
+        ),
+    ),
+    "admin": (
+        "🗂 Административный персонал",
+        re.compile(
+            r"ассистент|секретар|делопроизводител|офис-менеджер|документооборот"
+        ),
+    ),
+    "sales": (
+        "🛒 Продажи",
+        re.compile(r"продаж|торгов|менеджер по работе с клиентами|магазин|администратор"),
+    ),
+    "logistics": (
+        "🚚 Логистика",
+        re.compile(
+            r"курьер|логист|кладовщик|комплектовщик|водитель|склад"
+            r"|экспедитор|доставк"
+        ),
+    ),
+    "blue_collar": (
+        "🛠 Рабочие",
+        re.compile(
+            r"мастер|сварщик|грузчик|монтажник|электрик|сантехник|бетон"
+            r"|отделоч|разнорабоч|прораб|маляр|штукатур|арматур|слесар"
+            r"|машинист|рабочий"
+        ),
+    ),
+}
 
 
 def check_geography(vacancy: Vacancy) -> bool:
@@ -65,3 +118,48 @@ def is_relevant(vacancy: Vacancy, cfg: FilterConfig, home=None) -> bool:
     if vacancy.company and vacancy.company in cfg.exclude_companies:
         return False
     return check_salary(vacancy, cfg)
+
+
+def check_user_location(vacancy: Vacancy, prefs: UserSettings) -> bool:
+    """Локация из настроек: city=None — только удалёнка, иначе офис в городе
+    плюс удалёнка, если prefs.remote."""
+    if prefs.remote and vacancy.is_remote:
+        return True
+    if prefs.city and not vacancy.is_remote:
+        return (vacancy.city or "").strip().lower() == prefs.city.strip().lower()
+    return False
+
+
+def check_user_salary(vacancy: Vacancy, min_salary: int) -> bool:
+    if vacancy.salary_from is not None:
+        return vacancy.salary_from >= min_salary
+    if vacancy.salary_to is not None:
+        return vacancy.salary_to >= min_salary
+    return True
+
+
+def check_job_types(vacancy: Vacancy, job_types) -> bool:
+    """Сфера: строго по названию вакансии, не по описанию.
+
+    Пустой набор означает «без разницы».
+    """
+    chosen = tuple(job_types or ())
+    if not chosen:
+        return True
+    title = (vacancy.title or "").lower()
+    return any(
+        pattern.search(title)
+        for key, (_, pattern) in SPHERES.items()
+        if key in chosen
+    )
+
+
+def matches_user(vacancy: Vacancy, prefs: UserSettings) -> bool:
+    """Персональные фильтры поверх общих: локация, сфера, стоп-слова, порог ЗП."""
+    if not check_user_location(vacancy, prefs):
+        return False
+    if not check_job_types(vacancy, prefs.job_types):
+        return False
+    if find_flags(vacancy, prefs.stop_words):
+        return False
+    return check_user_salary(vacancy, prefs.min_salary)

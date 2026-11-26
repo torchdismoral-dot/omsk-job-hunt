@@ -20,36 +20,15 @@ DEFAULT_ALLOWED_EXPERIENCE = ("Без опыта", "Не имеет значен
 
 DEFAULT_DROP_WORDS = ("военнослужащ", "по контракту", "беспилотн", "вахт")
 
-# Отсев по названию вакансии: рабочие специальности и заграничные стройки.
+# Отсев по названию вакансии: медицина, образование, торговый зал, заграничные стройки.
+# Рабочие специальности и курьеры сюда больше не входят: их отбирают сферы пользователя.
 DEFAULT_TITLE_DROP_WORDS = (
-    "мастер",
-    "машинист",
-    "сварщик",
-    "бетон",
-    "отделоч",
-    "прораб",
-    "водител",
-    "грузчик",
-    "электрик",
-    "сантехник",
-    "монтажник",
-    "стропальщик",
-    "разнорабоч",
     "уборщик",
-    "арматур",
-    "маляр",
-    "штукатур",
-    "слесар",
     "повар",
     "пекар",
     "продавец",
     "охранник",
-    "кладовщик",
     "дворник",
-    "курьер",
-    "доставк",
-    "сборщик заказ",
-    "рабочий",
     "учител",
     "преподавател",
     "педагог",
@@ -113,6 +92,8 @@ class Settings:
     remote_keywords: tuple[str, ...] = ()
     top_n: int = 10
     digest_hours: int = 48
+    refresh_hour: int = 9
+    admin_id: int | None = None
     home_lat: float | None = None
     home_lng: float | None = None
     sources: SourcesConfig = field(default_factory=SourcesConfig)
@@ -176,4 +157,13 @@ def load_config(path: str | Path = "config.yaml") -> Settings:
     settings.top_n = int((data.get("rank") or {}).get("top_n", settings.top_n))
     bot = data.get("bot") or {}
     settings.digest_hours = int(bot.get("digest_hours", settings.digest_hours))
+    settings.refresh_hour = int(bot.get("refresh_hour", settings.refresh_hour))
+
+    # Переменная окружения важнее файла: на хостинге секреты задаются в панели.
+    admin_id = os.environ.get("ADMIN_ID") or data.get("admin_id")
+    if admin_id:
+        try:
+            settings.admin_id = int(admin_id)
+        except (TypeError, ValueError):
+            settings.admin_id = None
     return settings
