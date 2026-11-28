@@ -8,6 +8,7 @@ from aiogram.types import CallbackQuery, Message
 
 from ..config import Settings
 from ..db import DB
+from .admin import build_admin_router
 from .digest import send_digest
 from .donations import build_donate_router
 from .feed import send_slice
@@ -19,6 +20,8 @@ log = logging.getLogger(__name__)
 
 def build_router(settings: Settings, db_path: str) -> Router:
     router = Router()
+    # Первым: команда админа не должна попасть в FSM-перехват онбординга
+    router.include_router(build_admin_router(settings, db_path))
     router.include_router(build_onboarding_router(settings, db_path))
     router.include_router(build_donate_router(settings, db_path))
 

@@ -27,6 +27,10 @@ DONATION_THANKS = (
     "Твой вклад помогает боту становиться лучше."
 )
 
+NO_ACCESS_TEXT = "Нет доступа."
+REFRESH_START_TEXT = "Начинаю сбор вакансий..."
+REFRESH_FAILED_TEXT = "Сбор не удался, подробности в логах."
+
 
 def vacancy_html(index: int, vacancy: Vacancy, home: tuple[float, float] | None = None) -> str:
     head = f"<b>{index}. {html.escape(vacancy.title)}</b>"

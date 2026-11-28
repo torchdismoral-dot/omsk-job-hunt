@@ -9,6 +9,7 @@
 | Источник | Статус | Почему |
 |---|---|---|
 | hh.ru API | **вычеркнут** | поддержка для соискателей прекращена 15.12.2025; `/vacancies` отдаёт 403 при любом UA, в браузере и без VPN |
+| hh.ru выдача (HTML+JSON) | **рабочий, добавлен 28.11.2026** | страница `/search/vacancy` отдаётся без браузера, вся выборка лежит в `<template id="HH-Lux-InitialState">` |
 | SuperJob API | **рабочий, основной** | ключ приложения `OmWork` (ID 5377) проверен 26.11.2026 |
 | trudvsem (Работа России) | рабочий, второй | открытый JSON без ключа, но видно ~2% базы |
 
@@ -117,24 +118,77 @@ GET https://opendata.trudvsem.ru/api/v1/vacancies/region/5500000000000
 
 ---
 
+## 3b. hh.ru — третий источник (добавлено 28.11.2026)
+
+Официальный API мёртв, но страница выдачи отдаётся обычным HTTP-запросом и
+содержит всю выборку в JSON:
+
+```
+GET https://hh.ru/search/vacancy?text=&area=68&experience=noExperience
+    &search_period=2&order_by=publication_time&page=0
+Headers: User-Agent (браузерный), Accept-Language: ru-RU
+Тело: <template id="HH-Lux-InitialState"> ...JSON, экранированный как HTML...
+      vacancySearchResult.vacancies  -> список карточек
+      vacancySearchResult.totalResults, .paging.lastPage.page
+```
+
+Замеры на живом hh (28.11.2026):
+
+| Запрос | Всего вакансий | Страниц |
+|---|---|---|
+| `area=68` (Омск), без опыта, 2 дня | 690–705 | 14–15 |
+| `area=113&work_format=REMOTE`, без опыта, 2 дня | 1772 | ~35 |
+| `area=68&work_format=REMOTE` (удалёнка из Омска) | 18 | 1 |
+
+Карточка содержит: `vacancyId`, `name`, `company.visibleName`,
+`compensation{from,to,currencyCode,gross,mode,frequency}`, `area.name`,
+`address.displayName`, `address.marker.@lat/@lng`, `publicationTime.@timestamp`,
+`workExperience`, `workFormats[].workFormatsElement`, `links.desktop`, `@isAdv`.
+
+Ловушки:
+
+- **`api.hh.ru` даёт 403** и с `User-Agent`, и с `HH-User-Agent` — путь только через выдачу.
+- **`User-Agent` обязан быть браузерным**: urllib-овский UA режется.
+- **`@isAdv: true`** — платные вставки, у них `clickUrl` ведёт на `adsrv.hh.ru`
+  и это вакансии чужих регионов. Отбрасываем на входе.
+- **Описания в выдаче нет** — только заголовок и компания. Стоп-слова по описанию
+  для hh не работают; при необходимости догружаем карточку `/vacancy/<id>` отдельно.
+- `currencyCode = "RUR"` — это рубль, нормализуем в `RUB`.
+- `workExperience` — код (`noExperience`/`between1And3`/...), а не подпись:
+  переводим в формат SuperJob, иначе не совпадёт с `allowed_experience`.
+- Удалёнка определяется по `workFormats[].workFormatsElement == "REMOTE"`,
+  блок может прийти пустым (`[{}]`).
+- `area=68` — Омск (в SuperJob свой нумератор: там Омск = 17).
+- `paging.lastPage.page` — индекс последней страницы; `criteria.limit` приходит как `-1`,
+  реальное число карточек на странице ~50.
+- Разметку hh меняет часто: контракт изолирован в `hh.py`, фикстура
+  `tests/fixtures/hh_search_omsk.json`, обновлять через `scripts/fetch_hh_fixture.py`.
+- **Playwright не нужен**: выдача рендерится на сервере. Playwright не решает
+  и главную угрозу — блокировку IP датацентра (на Amvera), лечится только прокси
+  `HH_PROXY`. Отказ hh не должен ронять сбор остальных источников.
+
+---
+
 ## 4. Нормализация
 
 Обе площадки приводятся к одной записи:
 
-| Поле | SuperJob | trudvsem |
-|---|---|---|
-| `source` | `superjob` | `trudvsem` |
-| `source_id` | `id` (int) | `vacancy.id` |
-| `title` | `profession` | `job-name` |
-| `company` | `firm_name` | `company.name` |
-| `salary_from` | `payment_from or None` | `salary_min or None` |
-| `salary_to` | `payment_to or None` | `salary_max or None` |
-| `currency` | `currency` (`rub`) | `RUB` |
-| `city` | `town.title` | из `addresses[0].location` |
-| `is_remote` | `place_of_work.id == 2` | по тексту `schedule` |
-| `experience` | `experience.title` | `requirement.experience` |
-| `url` | `link` | `vac_url` |
-| `published_at` | `date_published` (unix → ISO) | `creation-date` |
+| Поле | SuperJob | trudvsem | hh.ru |
+|---|---|---|---|
+| `source` | `superjob` | `trudvsem` | `hh` |
+| `source_id` | `id` (int) | `vacancy.id` | `vacancyId` |
+| `title` | `profession` | `job-name` | `name` |
+| `company` | `firm_name` | `company.name` | `company.visibleName` |
+| `salary_from` | `payment_from or None` | `salary_min or None` | `compensation.from or None` |
+| `salary_to` | `payment_to or None` | `salary_max or None` | `compensation.to or None` |
+| `currency` | `currency` (`rub`) | `RUB` | `compensation.currencyCode` (`RUR`→`RUB`) |
+| `city` | `town.title` | из `addresses[0].location` | `area.name` |
+| `is_remote` | `place_of_work.id == 2` | по тексту `schedule` | `workFormats[].workFormatsElement == 'REMOTE'` |
+| `experience` | `experience.title` | `requirement.experience` | код `workExperience` → подпись SuperJob |
+| `url` | `link` | `vac_url` | `links.desktop`, иначе `hh.ru/vacancy/<id>` |
+| `published_at` | `date_published` (unix → ISO) | `creation-date` | `publicationTime.@timestamp` (unix → ISO) |
+| `lat`/`lng` | `latitude`/`longitude` | `addresses[0].lat/lng` | `address.marker.@lat/@lng` |
+| `description` | `work` + `candidat` | `duty` + `requirements` | нет в выдаче |
 
 Ключ вакансии в БД: `source || ':' || source_id` — id у площадок пересекаются.
 
@@ -271,6 +325,7 @@ omsk-job-hunt/
 │   ├── db.py                # schema, upsert, mark_sent, get_unsent
 │   ├── superjob.py          # клиент API, пагинация по 40, паузы
 │   ├── trudvsem.py          # клиент открытых данных
+│   ├── hh.py                # клиент выдачи hh.ru (JSON из HH-Lux-InitialState)
 │   ├── normalize.py         # raw JSON -> запись, единая схема
 │   ├── filters.py           # география, опыт, стоп-слова, зарплата
 │   ├── render.py            # общий текст: деньги, дата, место, расстояние
@@ -356,6 +411,7 @@ bot:
 | M2 | бот: `/top` с кнопками | роутер и сообщения покрыты тестами; живой запуск 26.11.2026 — **закрыт** |
 | M3 | подписка + дайджест + дедуп | `sent` не даёт повторно отправить; без новинок молчит — **написан 26.11.2026**, 104 теста |
 | M4 | «по близости» по координатам | ближние первыми, удалёнка в конце — **закрыт вместе с M1** |
+| M5 | hh.ru без Playwright | third source: 280+ вакансий за прогон, отказ hh не роняет сбор — **закрыт 28.11.2026**, 276 тестов |
 
 ---
 

@@ -84,6 +84,17 @@ class SourcesConfig:
     trudvsem_base_url: str = "https://opendata.trudvsem.ru/api/v1"
     trudvsem_region: str = "5500000000000"
     trudvsem_limit: int = 150
+    # hh.ru: берём выдачу из JSON-состояния страницы, API площадки закрыт (403).
+    hh_enabled: bool = True
+    hh_base_url: str = "https://hh.ru"
+    hh_area_omsk: int = 68
+    hh_area_remote: int = 113
+    hh_experience: str = "noExperience"
+    hh_search_period_days: int = 2
+    hh_max_pages_omsk: int = 15
+    hh_max_pages_remote: int = 12
+    hh_delay_ms: int = 1500
+    hh_proxy_env: str = "HH_PROXY"
 
 
 @dataclass
@@ -109,6 +120,11 @@ class Settings:
     def superjob_key(self) -> str | None:
         return os.environ.get(self.sources.superjob_key_env)
 
+    @property
+    def hh_proxy(self) -> str | None:
+        """Резидентный прокси для hh.ru: с датацентрового IP площадка даёт 403."""
+        return os.environ.get(self.sources.hh_proxy_env) or None
+
 
 def load_config(path: str | Path = "config.yaml") -> Settings:
     file = Path(path)
@@ -126,6 +142,21 @@ def load_config(path: str | Path = "config.yaml") -> Settings:
     settings.sources.trudvsem_base_url = trud.get("base_url", settings.sources.trudvsem_base_url)
     settings.sources.trudvsem_region = str(trud.get("region", settings.sources.trudvsem_region))
     settings.sources.trudvsem_limit = int(trud.get("max_records", settings.sources.trudvsem_limit))
+
+    hh = data.get("hh") or {}
+    sources = settings.sources
+    sources.hh_enabled = bool(hh.get("enabled", sources.hh_enabled))
+    sources.hh_base_url = hh.get("base_url", sources.hh_base_url)
+    sources.hh_area_omsk = int(hh.get("area_omsk", sources.hh_area_omsk))
+    sources.hh_area_remote = int(hh.get("area_remote", sources.hh_area_remote))
+    sources.hh_experience = str(hh.get("experience", sources.hh_experience))
+    sources.hh_search_period_days = int(
+        hh.get("search_period_days", sources.hh_search_period_days)
+    )
+    sources.hh_max_pages_omsk = int(hh.get("max_pages_omsk", sources.hh_max_pages_omsk))
+    sources.hh_max_pages_remote = int(hh.get("max_pages_remote", sources.hh_max_pages_remote))
+    sources.hh_delay_ms = int(hh.get("delay_ms", sources.hh_delay_ms))
+    sources.hh_proxy_env = str(hh.get("proxy_env", sources.hh_proxy_env))
 
     search = data.get("search") or {}
     settings.town_omsk = int(search.get("town_omsk", settings.town_omsk))

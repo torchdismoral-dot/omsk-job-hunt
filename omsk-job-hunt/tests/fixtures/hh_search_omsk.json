@@ -1,0 +1,8147 @@
+{
+ "totalResults": 690,
+ "criteria": {
+  "page": 0,
+  "limit": -1,
+  "offset": -1,
+  "clusters": false,
+  "area": [
+   68
+  ],
+  "currency_code": "RUR",
+  "metro": [],
+  "professional_role": [],
+  "search_debug": false,
+  "control_flag": [
+   "vacancyBlacklistJoinEnabled:True",
+   "vrRatesBoostDisabled:True",
+   "useSeparateAcceptTemporary:True",
+   "notRecommendSpammerEmployers:True",
+   "spamVacancyResponsesThreshold:100",
+   "logDocsWithPenaltyCount:True",
+   "scorerStatsdMetricsEnabledForPercentage:1",
+   "antifraudPessimizationEnabledFlag:True",
+   "antifraudPessimizationRateEnabledFlag:True",
+   "problemEmployerPessimizationEnabledFlag:True",
+   "monetizationPriorityEnabledPfpOverrideFlag:True",
+   "mixingSimilarQueryTopN:10",
+   "mixingSimilarQueryDisablePrioritySort:True",
+   "mixingSimilarQueryEnabled:True",
+   "useDeduplicationCollector:True"
+  ],
+  "saved_search_id": null,
+  "search_session_id": "f36817f5-3bbf-49b1-b3cc-9d9cff58d10c",
+  "ai_search_session_id": null,
+  "vacancy_id": null,
+  "resume": null,
+  "no_magic": false,
+  "ored_clusters": true,
+  "cache_ttl_sec": null,
+  "district": [],
+  "suggestId": null,
+  "driver_license_types": [],
+  "employment": [],
+  "schedule": [],
+  "text": "",
+  "simplified_text": "",
+  "date_from": null,
+  "date_to": null,
+  "items_on_page": 50,
+  "order_by": "publication_time",
+  "label": [],
+  "search_field": [
+   "name",
+   "company_name",
+   "description"
+  ],
+  "experience": [
+   "noExperience"
+  ],
+  "enable_snippets": false,
+  "only_with_salary": false,
+  "part_time": [],
+  "is_part_time_clusters_enabled": false,
+  "exclude_archived": true,
+  "exclude_closed": true,
+  "search_period": 2,
+  "salary": null,
+  "salary_frequency": [],
+  "salary_mode": null,
+  "bottom_left_lat": null,
+  "bottom_left_lng": null,
+  "top_right_lat": null,
+  "top_right_lng": null,
+  "sort_point_lat": null,
+  "sort_point_lng": null,
+  "employer_id": null,
+  "excluded_employer_id": null,
+  "employer_manager_id": null,
+  "industry": [],
+  "education": [],
+  "precision": null,
+  "geocode_type": null,
+  "geohash": null,
+  "polygon": [],
+  "recommended_by_uid": false,
+  "managed_feed": false,
+  "hide_uninvited_response_vacancies": false,
+  "excluded_text": null,
+  "accept_temporary": null,
+  "employment_form": [],
+  "work_schedule_by_days": [],
+  "work_format": [],
+  "working_hours": [],
+  "mixing_similar_queries": true,
+  "inclusiveness_types": []
+ },
+ "paging": {
+  "previous": {
+   "page": -1,
+   "disabled": true
+  },
+  "pages": [
+   {
+    "text": "1",
+    "page": 0,
+    "selected": true,
+    "inShortRange": true
+   },
+   {
+    "text": "2",
+    "page": 1,
+    "selected": false,
+    "inShortRange": true
+   },
+   {
+    "text": "3",
+    "page": 2,
+    "selected": false,
+    "inShortRange": true
+   },
+   {
+    "text": "4",
+    "page": 3,
+    "selected": false,
+    "inShortRange": false
+   },
+   {
+    "text": "5",
+    "page": 4,
+    "selected": false,
+    "inShortRange": false
+   },
+   {
+    "text": "...",
+    "page": 5,
+    "selected": false,
+    "inShortRange": false
+   }
+  ],
+  "firstPage": null,
+  "lastPage": {
+   "page": 13,
+   "selected": false
+  },
+  "next": {
+   "page": 1,
+   "disabled": false
+  },
+  "os": "Win"
+ },
+ "vacancies": [
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 135330477,
+   "name": "Расклейщик",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@structureName": "mts",
+    "@state": "APPROVED",
+    "id": 3776,
+    "name": "МТС",
+    "visibleName": "\"МТС\", Продажи и развитие",
+    "structureName": "mts",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1389236.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7176730.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7176731.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7176731.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7176732.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7176732.png"
+      }
+     ],
+     "@showInSearch": true
+    },
+    "department": {
+     "@name": "\"МТС\", Продажи и развитие",
+     "@code": "mts-3776-sale"
+    },
+    "mainEmployerId": 3776,
+    "badges": {
+     "badge": [
+      {
+       "type": "employer-it-accreditation",
+       "description": "Работодатель указал, что аккредитован как ИТ-компания",
+       "url": "https://feedback.hh.ru/knowledge-base/article/00038?search=a072cc087d3a0544c6f4ff80394005d5"
+      },
+      {
+       "type": "hrbrand",
+       "description": "Победитель Премии HR-бренд",
+       "url": "http://hrbrand.ru/",
+       "position": "winner"
+      }
+     ]
+    },
+    "companySiteUrl": "https://job.mts.ru/",
+    "accreditedITEmployer": true,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 60000,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 60000,
+    "mode": "MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795842140,
+    "$": "2026-11-28T08:02:20.136+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "hr-brand": {
+    "@url": "http://hrbrand.ru/",
+    "type": "winner"
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 11352132,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "displayName": "Омск",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.989347,\"lng\":73.368221,\"zoom\":14},\"marker\":{\"lat\":54.989347,\"lng\":73.368221}}}",
+    "marker": {
+     "@lat": 54.989347,
+     "@lng": 73.368221
+    },
+    "manager": {
+     "@id": 13146100
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "contactInfo": null,
+   "template": "makeup:33834",
+   "code": "code 6855342",
+   "creationSite": "hh.ru",
+   "creationSiteId": 1,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795842140,
+    "$": "2026-11-28T08:02:20.237+03:00"
+   },
+   "creationTime": "2026-07-18T09:46:29.625+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/135330477",
+    "mobile": "https://m.hh.ru/vacancy/135330477"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {
+     "workingTimeInterval": [
+      "FROM_FOUR_TO_SIX_HOURS_IN_A_DAY"
+     ]
+    }
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "division": {
+    "@id": 1087
+   },
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750192850,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65065750"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T08:02:20+03:00",
+        "endTimeIso": "2026-12-28T08:02:20+03:00"
+       },
+       {
+        "id": 662137748,
+        "propertyType": "ZP_PROMO",
+        "defining": true,
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1281873"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-07-27T15:57:42.658208+03:00",
+        "endTimeIso": "2026-12-28T08:02:20+03:00"
+       },
+       {
+        "id": 739944765,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 1000,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-16T09:02:51.946"
+           },
+           {
+            "key": "packageName",
+            "value": "VPREM"
+           },
+           {
+            "key": "serviceId",
+            "value": "65262347"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T09:02:51.946+03:00",
+        "endTimeIso": "2026-12-16T09:02:51.946+03:00"
+       },
+       {
+        "id": 662137747,
+        "propertyType": "HH_AUCTION",
+        "bundle": "HH",
+        "propertyWeight": 90,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "HH_AUCTION"
+           },
+           {
+            "key": "serviceId",
+            "value": "1281873"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-07-27T15:57:42.658208+03:00"
+       },
+       {
+        "id": 717138608,
+        "propertyType": "HH_CLICKME_ACTIVE",
+        "bundle": "HH",
+        "propertyWeight": 1600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "eventTime",
+            "value": "2026-10-12T10:18:07.221737279+03:00"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_CLICKME_ACTIVE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-106"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-10-12T10:18:08.618857+03:00"
+       },
+       {
+        "id": 739944768,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 1000,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-16T09:02:51.946"
+           },
+           {
+            "key": "packageName",
+            "value": "VPREM"
+           },
+           {
+            "key": "serviceId",
+            "value": "65262347"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T09:02:51.946+03:00",
+        "endTimeIso": "2026-12-16T09:02:51.946+03:00"
+       },
+       {
+        "id": 739944771,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 1000,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-16T09:02:51.946"
+           },
+           {
+            "key": "packageName",
+            "value": "VPREM"
+           },
+           {
+            "key": "serviceId",
+            "value": "65262347"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T09:02:51.946+03:00",
+        "endTimeIso": "2026-12-16T09:02:51.946+03:00"
+       },
+       {
+        "id": 739944764,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 1000,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-16T09:02:51.946"
+           },
+           {
+            "key": "packageName",
+            "value": "VPREM"
+           },
+           {
+            "key": "serviceId",
+            "value": "65262347"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T09:02:51.946+03:00",
+        "endTimeIso": "2026-12-16T09:02:51.946+03:00"
+       },
+       {
+        "id": 750192849,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65065750"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T08:02:20+03:00",
+        "endTimeIso": "2026-12-28T08:02:20+03:00"
+       },
+       {
+        "id": 750192851,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65065750"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T08:02:20+03:00",
+        "endTimeIso": "2026-12-28T08:02:20+03:00"
+       },
+       {
+        "id": 662137749,
+        "propertyType": "ZP_ACCESSIBLE",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1281873"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-07-27T15:57:42.658208+03:00"
+       },
+       {
+        "id": 662137750,
+        "propertyType": "ZP_SEARCH_RESULTS_NO_POSITION",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1281873"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-07-27T15:57:42.658208+03:00",
+        "endTimeIso": "2026-12-28T08:02:20+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedTo": [
+       "ZP"
+      ],
+      "filteredPropertyNames": [
+       "HH_RESUME_GIFTS",
+       "HH_NEURO_SURVEY",
+       "HH_CLICKME_ACTIVE",
+       "HH_STANDARD",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_AI_ASSISTANT",
+       "HH_NEURO_RESPONSE_ANALYZER",
+       "ZP_ACCESSIBLE",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_AUCTION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     },
+     "ZP": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedFrom": "HH",
+      "filteredPropertyNames": [
+       "ZP_SEARCH_RESULTS_NO_POSITION",
+       "ZP_PROMO",
+       "ZP_ACCESSIBLE"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Промо"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      40
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "PART"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "PART",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {}
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_4",
+      "HOURS_6"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newEmploymentTerms",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "branding": {
+    "type": "MAKEUP"
+   },
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 315,
+   "online_users_count": 4,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 3
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945758,
+   "name": "Сотрудник VR-арены в парк \"Вокруг света\"",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 9792267,
+    "name": "Колесо обозрения, парк развлечений",
+    "visibleName": "Колесо обозрения, парк развлечений",
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 41000,
+    "to": 48000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 41000,
+    "perModeTo": 48000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795841380,
+    "$": "2026-11-28T07:49:40.529+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 13247004,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "улица Старозагородная Роща",
+    "building": "8/4",
+    "displayName": "Омск, улица Старозагородная Роща, 8/4",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.00431799997883,\"lng\":73.33856800000001,\"zoom\":21},\"marker\":{\"lat\":55.004318,\"lng\":73.338568}}}",
+    "marker": {
+     "@lat": 55.004318,
+     "@lng": 73.338568
+    },
+    "manager": {
+     "@id": 12211209
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "yaroslavl.hh.ru",
+   "creationSiteId": 6,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795842087,
+    "$": "2026-11-28T08:01:27.219+03:00"
+   },
+   "creationTime": "2026-11-28T07:49:40.529+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945758",
+    "mobile": "https://m.hh.ru/vacancy/139945758"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750192281,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67730870"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T07:49:40.529+03:00",
+        "endTimeIso": "2026-12-28T07:49:40.529+03:00"
+       },
+       {
+        "id": 750192280,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67730870"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T07:49:40.529+03:00",
+        "endTimeIso": "2026-12-28T07:49:40.529+03:00"
+       },
+       {
+        "id": 750192282,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67730870"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T07:49:40.529+03:00",
+        "endTimeIso": "2026-12-28T07:49:40.529+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_STANDARD",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_RESUME_GIFTS"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      102
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "flyInFlyOutModalSwitch",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 1,
+   "online_users_count": 5,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    },
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 4
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139451148,
+   "name": "Горничная",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 1365503,
+    "name": "Комплекс Дворец Молодежи",
+    "visibleName": "Комплекс Дворец Молодежи",
+    "companySiteUrl": "http://www.kdmhotel.ru",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 37000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 37000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795840930,
+    "$": "2026-11-28T07:42:10.878+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 401194,
+    "@disabled": false,
+    "@wrong": false,
+    "rawAddress": "улица Перелета, 1",
+    "city": "Омск",
+    "street": "улица Перелета",
+    "building": "1",
+    "displayName": "Омск, улица Перелета, 1",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.98784899998418,\"lng\":73.28062599999996,\"zoom\":18},\"marker\":{\"lat\":54.987849,\"lng\":73.280626}}}",
+    "marker": {
+     "@lat": 54.987849,
+     "@lng": 73.280626
+    },
+    "manager": {
+     "@id": 14673806
+    },
+    "districtDto": {
+     "id": 183,
+     "isMicroDistrict": false,
+     "name": "Кировский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841023,
+    "$": "2026-11-28T07:43:43.243+03:00"
+   },
+   "creationTime": "2026-11-13T07:42:10.878+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139451148",
+    "mobile": "https://m.hh.ru/vacancy/139451148"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 737655208,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955866"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:42:10.878+03:00",
+        "endTimeIso": "2026-12-13T07:42:10.878+03:00"
+       },
+       {
+        "id": 737655210,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955866"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:42:10.878+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:42:10.878+03:00",
+        "endTimeIso": "2026-12-13T07:42:10.878+03:00"
+       },
+       {
+        "id": 737874354,
+        "propertyType": "HH_MONETIZATION_PERFORMANCE_BAD",
+        "bundle": "HH",
+        "propertyWeight": 1500,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actionReason",
+            "value": "POOR_VACANCY_CONVERSION_TO_RR"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_MONETIZATION_PERFORMANCE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-200"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T11:10:58.509877+03:00"
+       },
+       {
+        "id": 737655209,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955866"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:42:10.878+03:00",
+        "endTimeIso": "2026-12-13T07:42:10.878+03:00"
+       },
+       {
+        "id": 737655207,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955866"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:42:10.878+03:00",
+        "endTimeIso": "2026-12-13T07:42:10.878+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_MONETIZATION_PERFORMANCE_BAD",
+       "HH_STANDARD_PLUS",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_AUTO_RENEWAL"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      130
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "THREE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_9"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 13,
+   "totalResponsesCount": 13,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 5
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 138100441,
+   "name": "Продавец-консультант в автомагазин",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@structureName": "1120259",
+    "@state": "APPROVED",
+    "id": 1120259,
+    "name": "МаслоМаркет",
+    "visibleName": "МаслоМаркет",
+    "structureName": "1120259",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1474596.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7823941.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7823942.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7823942.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7823943.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7823943.png"
+      }
+     ],
+     "@showInSearch": true
+    },
+    "mainEmployerId": 1120259,
+    "badges": {
+     "badge": [
+      {
+       "type": "employer-hh-rating",
+       "description": "Финалист Рейтинга работодателей hh.ru",
+       "url": "https://rating.hh.ru/poll/",
+       "position": "389",
+       "year": 2025
+      }
+     ]
+    },
+    "companySiteUrl": "http://www.maslomarket.com",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 60000,
+    "to": 80000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 60000,
+    "perModeTo": 80000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795840904,
+    "$": "2026-11-28T07:41:44.655+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 2811035,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "микрорайон Городок Нефтяников, улица Энтузиастов",
+    "building": "11/1",
+    "displayName": "Омск, микрорайон Городок Нефтяников, улица Энтузиастов, 11/1",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.046954999978595,\"lng\":73.29012099999997,\"zoom\":19},\"marker\":{\"lat\":55.046955,\"lng\":73.290121}}}",
+    "marker": {
+     "@lat": 55.046955,
+     "@lng": 73.290121
+    },
+    "manager": {
+     "@id": 5015318
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "template": "vacancy-constructor:44719",
+   "creationSite": "ekaterinburg.hh.ru",
+   "creationSiteId": 9,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841041,
+    "$": "2026-11-28T07:44:01.995+03:00"
+   },
+   "creationTime": "2026-10-05T07:41:38.591+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/138100441",
+    "mobile": "https://m.hh.ru/vacancy/138100441"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 732114151,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 728906478,
+        "propertyType": "ZP_PROMO",
+        "defining": true,
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1372163"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-10-29T11:58:40.837002+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 732114148,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-04T07:41:44.647"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 728906477,
+        "propertyType": "HH_AUCTION",
+        "bundle": "HH",
+        "propertyWeight": 90,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "HH_AUCTION"
+           },
+           {
+            "key": "serviceId",
+            "value": "1372163"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-10-29T11:58:40.837002+03:00"
+       },
+       {
+        "id": 732114149,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:41:44.647+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 735762333,
+        "propertyType": "HH_BRAND_STICKER",
+        "bundle": "HH",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "BRAND_STICKER"
+           },
+           {
+            "key": "serviceId",
+            "value": "68923249"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-11T06:26:40.428835+03:00",
+        "endTimeIso": "2026-12-11T06:26:40.428835+03:00"
+       },
+       {
+        "id": 732114150,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-04T07:41:44.647"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 732114152,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-04T07:41:44.647"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 732114147,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-04T07:41:44.647"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 732114146,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68849017"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-04T07:41:44.647+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       },
+       {
+        "id": 728906479,
+        "propertyType": "ZP_ACCESSIBLE",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1372163"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-10-29T11:58:40.837002+03:00"
+       },
+       {
+        "id": 728906480,
+        "propertyType": "ZP_SEARCH_RESULTS_NO_POSITION",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "1372163"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-10-29T11:58:40.837002+03:00",
+        "endTimeIso": "2026-12-04T07:41:44.647+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedTo": [
+       "ZP"
+      ],
+      "filteredPropertyNames": [
+       "HH_AI_ASSISTANT",
+       "ZP_ACCESSIBLE",
+       "HH_NEURO_SURVEY",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_BRAND_STICKER",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_AUCTION",
+       "HH_AUTO_RENEWAL",
+       "HH_STANDARD_PLUS",
+       "HH_NEURO_RESPONSE_ANALYZER"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD_PLUS"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт плюс"
+     },
+     "ZP": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedFrom": "HH",
+      "filteredPropertyNames": [
+       "ZP_ACCESSIBLE",
+       "ZP_SEARCH_RESULTS_NO_POSITION",
+       "ZP_PROMO"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Промо"
+     }
+    }
+   },
+   "brandStickerIds": [
+    96,
+    48,
+    33
+   ],
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "sideJob": false,
+   "internship": true,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FOUR_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_10"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "brandStickers": [
+    {
+     "id": 96,
+     "name": "30 лет нам доверяют!"
+    },
+    {
+     "id": 48,
+     "name": "Оформление по ТК"
+    },
+    {
+     "id": 33,
+     "name": "Стажировка с оплатой"
+    }
+   ],
+   "branding": {
+    "type": "CONSTRUCTOR",
+    "tariff": "BASIC"
+   },
+   "userLabels": [],
+   "responsesCount": 160,
+   "totalResponsesCount": 336,
+   "online_users_count": 5,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 6
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139818072,
+   "name": "Дворник",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 5326371,
+    "name": "УК Омская",
+    "visibleName": "УК Омская",
+    "employerOrganizationFormId": 0,
+    "companySiteUrl": "http://uk-omskaya.omsk.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 20000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 20000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795840177,
+    "$": "2026-11-28T07:29:37.365+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": true,
+   "address": {
+    "@id": 32410509,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "микрорайон Городок Нефтяников",
+    "displayName": "Омск, микрорайон Городок Нефтяников",
+    "mapData": "{\"points\":{\"center\":{\"lng\":73.27686199999997,\"lat\":55.03292399999466,\"zoom\":17},\"marker\":{\"lng\":73.276862,\"lat\":55.032924}}}",
+    "marker": {
+     "@lat": 55.032924,
+     "@lng": 73.276862
+    },
+    "manager": {
+     "@id": 17009795
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841027,
+    "$": "2026-11-28T07:43:47.637+03:00"
+   },
+   "creationTime": "2026-11-25T07:29:37.365+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139818072",
+    "mobile": "https://m.hh.ru/vacancy/139818072"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 747716069,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071785"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:29:37.365+03:00",
+        "endTimeIso": "2026-12-25T07:29:37.365+03:00"
+       },
+       {
+        "id": 747716070,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071785"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:29:37.365+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:29:37.365+03:00",
+        "endTimeIso": "2026-12-25T07:29:37.365+03:00"
+       },
+       {
+        "id": 747716071,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071785"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:29:37.365+03:00",
+        "endTimeIso": "2026-12-25T07:29:37.365+03:00"
+       },
+       {
+        "id": 747716068,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071785"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:29:37.365+03:00",
+        "endTimeIso": "2026-12-25T07:29:37.365+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_AUTO_RENEWAL",
+       "HH_STANDARD_PLUS",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      32
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "PART"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "PART",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "OTHER"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_3"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {
+     "civilLawContractsElement": [
+      "INDIVIDUAL_ENTREPRENEUR",
+      "INDIVIDUAL_PERSON"
+     ]
+    }
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 3,
+   "totalResponsesCount": 3,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    },
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 7
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139638992,
+   "name": "Фармацевт/Провизор/Консультант",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 1353672,
+    "name": "ИнтерЛек",
+    "visibleName": "ИнтерЛек",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/1116196.jpeg"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/1116196.jpeg"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/1116197.jpeg"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/1116197.jpeg"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/1116198.jpeg"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/1116198.jpeg"
+      }
+     ]
+    },
+    "companySiteUrl": "http://www.interlek.ru",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 58000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 58000,
+    "mode": "MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795839357,
+    "$": "2026-11-28T07:15:57.451+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 20757192,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "5-я Кордная улица",
+    "building": "57",
+    "displayName": "Омск, 5-я Кордная улица, 57",
+    "mapData": "{\"points\":{\"center\":{\"lng\":73.470845,\"lat\":54.9590199999948,\"zoom\":17},\"marker\":{\"lng\":73.470845,\"lat\":54.95902}}}",
+    "marker": {
+     "@lat": 54.95902,
+     "@lng": 73.470845
+    },
+    "manager": {
+     "@id": 14222139
+    },
+    "districtDto": {
+     "id": 161,
+     "isMicroDistrict": false,
+     "name": "Октябрьский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "samara.hh.ru",
+   "creationSiteId": 8,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841009,
+    "$": "2026-11-28T07:43:29.971+03:00"
+   },
+   "creationTime": "2026-11-19T07:15:57.451+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139638992",
+    "mobile": "https://m.hh.ru/vacancy/139638992"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 742802082,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802079,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-19T07:15:57.451"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802080,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:15:57.451+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802081,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-19T07:15:57.451"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802083,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-19T07:15:57.451"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802078,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-19T07:15:57.451"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802076,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       },
+       {
+        "id": 742802077,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65267291"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-19T07:15:57.451+03:00",
+        "endTimeIso": "2026-12-19T07:15:57.451+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_NEURO_RESPONSE_ANALYZER",
+       "HH_STANDARD_PLUS",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_AUTO_RENEWAL",
+       "HH_AI_ASSISTANT",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_RESUME_GIFTS",
+       "HH_NEURO_SURVEY"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD_PLUS"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт плюс"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      133
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 16,
+   "totalResponsesCount": 16,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 8
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 137887917,
+   "name": "Горничная",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 1097950,
+    "name": "Зонт Хотел Групп",
+    "visibleName": "Зонт Хотел Групп",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/3173387.jpeg"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/3173387.jpeg"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/3173388.jpeg"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/3173388.jpeg"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/3173389.jpeg"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/3173389.jpeg"
+      }
+     ]
+    },
+    "employerOrganizationFormId": 0,
+    "companySiteUrl": "https://www.zont-hotelgroup.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 42000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 42000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795839187,
+    "$": "2026-11-28T07:13:07.586+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 410991,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "улица Броз Тито",
+    "building": "2",
+    "displayName": "Омск, улица Броз Тито, 2",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.97986699998425,\"lng\":73.373638,\"zoom\":17},\"marker\":{\"lat\":54.979867,\"lng\":73.373638}}}",
+    "marker": {
+     "@lat": 54.979867,
+     "@lng": 73.373638
+    },
+    "manager": {
+     "@id": 1343490
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795839187,
+    "$": "2026-11-28T07:13:07.682+03:00"
+   },
+   "creationTime": "2026-09-29T07:12:58.844+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/137887917",
+    "mobile": "https://m.hh.ru/vacancy/137887917"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191808,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68660185"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T07:13:07.577+03:00",
+        "endTimeIso": "2026-12-28T07:13:07.577+03:00"
+       },
+       {
+        "id": 750191807,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68660185"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T07:13:07.577+03:00",
+        "endTimeIso": "2026-12-28T07:13:07.577+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_STANDARD",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      130
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_11"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 97,
+   "online_users_count": 7,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 9
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139507632,
+   "name": "Менеджер отдела продаж",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 5313819,
+    "name": "АвтоШум",
+    "visibleName": "АвтоШум",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/6351017.jpeg"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/6351017.jpeg"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/6351018.jpeg"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/6351018.jpeg"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/6351019.jpeg"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/6351019.jpeg"
+      }
+     ]
+    },
+    "companySiteUrl": "https://xn--80ae4ahth8a.xn--p1ai/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 55000,
+    "to": 70000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 55000,
+    "perModeTo": 70000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795839141,
+    "$": "2026-11-28T07:12:21.373+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 6543607,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "проспект Комарова",
+    "building": "13Б",
+    "displayName": "Омск, проспект Комарова, 13Б",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.98896366715649,\"lng\":73.29591634323874,\"zoom\":16},\"marker\":{\"lat\":54.987864,\"lng\":73.297928}}}",
+    "marker": {
+     "@lat": 54.987864,
+     "@lng": 73.297928
+    },
+    "manager": {
+     "@id": 6746316
+    },
+    "districtDto": {
+     "id": 183,
+     "isMicroDistrict": false,
+     "name": "Кировский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841044,
+    "$": "2026-11-28T07:44:04.673+03:00"
+   },
+   "creationTime": "2026-11-16T06:29:03.502+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139507632",
+    "mobile": "https://m.hh.ru/vacancy/139507632"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 747713330,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713325,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T07:12:21.362"
+           },
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713327,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:12:21.362+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713328,
+        "propertyType": "HH_CLICKME_BOOST",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713329,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T07:12:21.362"
+           },
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713331,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T07:12:21.362"
+           },
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713324,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T07:12:21.362"
+           },
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713323,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       },
+       {
+        "id": 747713326,
+        "propertyType": "HH_VP_OPTIMUM",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 700,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP_OPTIMUM"
+           },
+           {
+            "key": "serviceId",
+            "value": "69071481"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T07:12:21.362+03:00",
+        "endTimeIso": "2026-12-25T07:12:21.362+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_NEURO_SURVEY",
+       "HH_AI_ASSISTANT",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_CLICKME_BOOST",
+       "HH_STANDARD_PLUS",
+       "HH_NEURO_RESPONSE_ANALYZER",
+       "HH_VP_OPTIMUM",
+       "HH_AUTO_RENEWAL"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": true,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD_PLUS_HH_VP_OPTIMUM"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оптимум"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      70
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 54,
+   "totalResponsesCount": 118,
+   "online_users_count": 2,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 10
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139508387,
+   "name": "Графический дизайнер / AI-креатор (ювелирный бренд)",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 2918079,
+    "name": "Сириус",
+    "visibleName": "Сириус",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/5992247.jpg"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/5992248.jpeg"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/5992249.jpeg"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/5992249.jpeg"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/5992250.jpeg"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/5992250.jpeg"
+      }
+     ]
+    },
+    "employerOrganizationFormId": 0,
+    "companySiteUrl": "http://sirius-omsk.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 60000,
+    "to": 90000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 60000,
+    "perModeTo": 90000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795839019,
+    "$": "2026-11-28T07:10:19.707+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": true,
+   "address": {
+    "@id": 20036132,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "улица Красный Путь",
+    "building": "143Е",
+    "displayName": "Омск, улица Красный Путь, 143Е",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.01180116090824,\"lng\":73.32922801679696,\"zoom\":16},\"marker\":{\"lat\":55.011593,\"lng\":73.330339}}}",
+    "marker": {
+     "@lat": 55.011593,
+     "@lng": 73.330339
+    },
+    "manager": {
+     "@id": 5527809
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841021,
+    "$": "2026-11-28T07:43:41.853+03:00"
+   },
+   "creationTime": "2026-11-16T07:10:19.707+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139508387",
+    "mobile": "https://m.hh.ru/vacancy/139508387"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 739909846,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68441302"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T07:10:19.707+03:00",
+        "endTimeIso": "2026-12-16T07:10:19.707+03:00"
+       },
+       {
+        "id": 739909847,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68441302"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:10:19.707+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T07:10:19.707+03:00",
+        "endTimeIso": "2026-12-16T07:10:19.707+03:00"
+       },
+       {
+        "id": 739913044,
+        "propertyType": "HH_MONETIZATION_PERFORMANCE_BAD",
+        "bundle": "HH",
+        "propertyWeight": 1500,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actionReason",
+            "value": "POOR_VACANCY_CONVERSION_TO_RR"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_MONETIZATION_PERFORMANCE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-200"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T07:31:25.198884+03:00"
+       },
+       {
+        "id": 739909848,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68441302"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T07:10:19.707+03:00",
+        "endTimeIso": "2026-12-16T07:10:19.707+03:00"
+       },
+       {
+        "id": 739909845,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68441302"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-16T07:10:19.707+03:00",
+        "endTimeIso": "2026-12-16T07:10:19.707+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_AUTO_RENEWAL",
+       "HH_STANDARD_PLUS",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_MONETIZATION_PERFORMANCE_BAD",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      34
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_8"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {
+     "civilLawContractsElement": [
+      "SELF_EMPLOYED",
+      "INDIVIDUAL_ENTREPRENEUR",
+      "INDIVIDUAL_PERSON"
+     ]
+    }
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 64,
+   "totalResponsesCount": 64,
+   "online_users_count": 8,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 11
+  },
+  {
+   "@workSchedule": "flexible",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139450590,
+   "name": "Продавец-консультант",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 12411178,
+    "name": "Море пива (ИП Чангелия Давид Гиевич)",
+    "visibleName": "Море пива (ИП Чангелия Давид Гиевич)",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1473960.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7736609.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7736610.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7736610.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7736611.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7736611.png"
+      }
+     ]
+    },
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 40000,
+    "to": 90000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 40000,
+    "perModeTo": 90000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795838911,
+    "$": "2026-11-28T07:08:31.723+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 28087673,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "улица Багратиона",
+    "building": "21",
+    "displayName": "Омск, улица Багратиона, 21",
+    "mapData": "{\"points\":{\"center\":{\"lng\":73.42290099999998,\"lat\":55.026230999994674,\"zoom\":17},\"marker\":{\"lng\":73.422901,\"lat\":55.026231}}}",
+    "marker": {
+     "@lat": 55.026231,
+     "@lng": 73.422901
+    },
+    "manager": {
+     "@id": 15941682
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "hh.ru",
+   "creationSiteId": 1,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841010,
+    "$": "2026-11-28T07:43:30.212+03:00"
+   },
+   "creationTime": "2026-11-13T07:08:31.723+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139450590",
+    "mobile": "https://m.hh.ru/vacancy/139450590"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 737651720,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651722,
+        "propertyType": "ZP_PROMO",
+        "defining": true,
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651715,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-13T07:08:31.723"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651718,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:08:31.723+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651719,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-13T07:08:31.723"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651712,
+        "propertyType": "HH_NEURO_INVITE",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-13T07:08:31.723"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651721,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-13T07:08:31.723"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651714,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-13T07:08:31.723"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651713,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651716,
+        "propertyType": "HH_STANDARD_PLUS_IN_PLATFORM_COMMUNICATION",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651717,
+        "propertyType": "HH_VACANCY_IN_PLATFORM_COMMUNICATION",
+        "bundle": "HH",
+        "propertyWeight": 550,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP_IPC"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955727"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651725,
+        "propertyType": "ZP_ACCESSIBLE",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-99"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651724,
+        "propertyType": "ZP_CROSSPOSTING",
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "zpPublicationTimeIso",
+            "value": "2026-11-13T07:08:31.80396696+03:00"
+           },
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       },
+       {
+        "id": 737651723,
+        "propertyType": "ZP_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68955728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T07:08:31.723+03:00",
+        "endTimeIso": "2026-12-13T07:08:31.723+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedTo": [
+       "ZP"
+      ],
+      "filteredPropertyNames": [
+       "ZP_ACCESSIBLE",
+       "ZP_CROSSPOSTING",
+       "HH_STANDARD_PLUS",
+       "HH_NEURO_SURVEY",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_STANDARD_PLUS_IN_PLATFORM_COMMUNICATION",
+       "HH_NEURO_RESPONSE_ANALYZER",
+       "HH_AUTO_RENEWAL",
+       "HH_NEURO_INVITE",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_AI_ASSISTANT",
+       "HH_VACANCY_IN_PLATFORM_COMMUNICATION"
+      ],
+      "free": false,
+      "inPlatformCommunication": true,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_STANDARD_PLUS_IN_PLATFORM_COMMUNICATION"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт плюс, связь через hh.ru"
+     },
+     "ZP": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedFrom": "HH",
+      "filteredPropertyNames": [
+       "ZP_ACCESSIBLE",
+       "ZP_CROSSPOSTING",
+       "ZP_PROMO",
+       "ZP_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Промо"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH",
+    "ZP"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": true,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "THREE_ON_THREE_OFF",
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 78,
+   "totalResponsesCount": 78,
+   "online_users_count": 1,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-employer-reply-speed-withinOneDay",
+     "text": "Отвечает в течение 1 дня"
+    },
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 12
+  },
+  {
+   "@workSchedule": "flyInFlyOut",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 136867241,
+   "name": "Электромонтажник-слаботочник",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "PRIVATE_INDIVIDUAL",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 12755352,
+    "name": "Гюлбекян Руслан Мкртычевич",
+    "visibleName": "Гюлбекян Руслан Мкртычевич",
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 131142,
+    "to": 179999,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 5100,
+    "perModeTo": 7000,
+    "mode": "SHIFT",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795838716,
+    "$": "2026-11-28T07:05:16.290+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 29559234,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Бийск",
+    "street": "Лесная улица",
+    "building": "25",
+    "displayName": "Бийск, Лесная улица, 25",
+    "mapData": "{\"points\":{\"center\":{\"lng\":85.11813100000003,\"lat\":52.500121999999166,\"zoom\":17},\"marker\":{\"lng\":85.118131,\"lat\":52.500122}}}",
+    "marker": {
+     "@lat": 52.500122,
+     "@lng": 85.118131
+    },
+    "manager": {
+     "@id": 16458191
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841035,
+    "$": "2026-11-28T07:43:55.988+03:00"
+   },
+   "creationTime": "2026-09-02T07:05:04.048+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/136867241",
+    "mobile": "https://m.hh.ru/vacancy/136867241"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 730416555,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68805831"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T07:05:16.284+03:00",
+        "endTimeIso": "2026-12-01T07:05:16.284+03:00"
+       },
+       {
+        "id": 730416556,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68805831"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:05:16.284+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T07:05:16.284+03:00",
+        "endTimeIso": "2026-12-01T07:05:16.284+03:00"
+       },
+       {
+        "id": 730530119,
+        "propertyType": "HH_MONETIZATION_PERFORMANCE_BAD",
+        "bundle": "HH",
+        "propertyWeight": 1500,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actionReason",
+            "value": "POOR_VACANCY_CONVERSION_TO_RR"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_MONETIZATION_PERFORMANCE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-200"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T14:03:13.165024+03:00"
+       },
+       {
+        "id": 730416557,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68805831"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T07:05:16.284+03:00",
+        "endTimeIso": "2026-12-01T07:05:16.284+03:00"
+       },
+       {
+        "id": 730416553,
+        "propertyType": "HH_RESUME_RECOMMENDATIONS_IGNORE_AREA",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68805831"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T07:05:16.284+03:00"
+       },
+       {
+        "id": 730416554,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68805831"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-01T07:05:16.284+03:00",
+        "endTimeIso": "2026-12-01T07:05:16.284+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_RESUME_RECOMMENDATIONS_IGNORE_AREA",
+       "HH_AUTO_RENEWAL",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_STANDARD_PLUS",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_MONETIZATION_PERFORMANCE_BAD"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      78
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FLY_IN_FLY_OUT",
+   "flyInFlyOutDurations": [
+    {
+     "flyInFlyOutDurationsElement": [
+      "DAYS_45",
+      "DAYS_60"
+     ]
+    }
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "SIX_ON_ONE_OFF",
+      "FLEXIBLE"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_10"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 5,
+   "totalResponsesCount": 19,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-label-work-schedule-flyInFlyOut",
+     "text": "Вахта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 13
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 131593397,
+   "name": "Врач скорой медицинской помощи",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 6331758,
+    "name": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ШАДРИНСКАЯ ГОРОДСКАЯ БОЛЬНИЦА",
+    "visibleName": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ШАДРИНСКАЯ ГОРОДСКАЯ БОЛЬНИЦА",
+    "companySiteUrl": "http://sh-pol.kurgan-med.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 75000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 75000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795838409,
+    "$": "2026-11-28T07:00:09.178+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 12316766,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Шадринск",
+    "street": "Михайловская улица",
+    "building": "64",
+    "displayName": "Шадринск, Михайловская улица, 64",
+    "mapData": "{\"points\":{\"center\":{\"lat\":56.07860799997336,\"lng\":63.62607299999998,\"zoom\":21},\"marker\":{\"lat\":56.078608,\"lng\":63.626073}}}",
+    "marker": {
+     "@lat": 56.078608,
+     "@lng": 63.626073
+    },
+    "manager": {
+     "@id": 8068832
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "ekaterinburg.hh.ru",
+   "creationSiteId": 9,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795841024,
+    "$": "2026-11-28T07:43:44.358+03:00"
+   },
+   "creationTime": "2026-03-27T06:59:20.644+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/131593397",
+    "mobile": "https://m.hh.ru/vacancy/131593397"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 745348455,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69039956"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-22T07:00:09.167+03:00",
+        "endTimeIso": "2026-12-22T07:00:09.167+03:00"
+       },
+       {
+        "id": 745348457,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69039956"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T07:00:09.167+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-22T07:00:09.167+03:00",
+        "endTimeIso": "2026-12-22T07:00:09.167+03:00"
+       },
+       {
+        "id": 745348456,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69039956"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-22T07:00:09.167+03:00",
+        "endTimeIso": "2026-12-22T07:00:09.167+03:00"
+       },
+       {
+        "id": 745348454,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "69039956"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-22T07:00:09.167+03:00",
+        "endTimeIso": "2026-12-22T07:00:09.167+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_STANDARD_PLUS",
+       "HH_AUTO_RENEWAL",
+       "HH_PAY_FOR_PERFORMANCE"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      24
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": true,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_8"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 4,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 14
+  },
+  {
+   "@workSchedule": "flexible",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945610,
+   "name": "Продавец-кассир (Омск, 5-я Северная, 192)",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@structureName": "1942330",
+    "@state": "APPROVED",
+    "id": 1942330,
+    "name": "Пятёрочка",
+    "visibleName": "Пятёрочка. Команда магазинов",
+    "structureName": "1942330",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/7101933.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/7101933.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/7101934.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/7101934.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/7101935.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/7101935.png"
+      }
+     ],
+     "@showInSearch": true
+    },
+    "department": {
+     "@name": "Пятёрочка. Команда магазинов",
+     "@code": "1942330-1942330-magaz"
+    },
+    "mainEmployerId": 1942330,
+    "badges": {
+     "badge": [
+      {
+       "type": "employer-hh-rating",
+       "description": "9-е место в Рейтинге работодателей hh.ru (крупнейшие компании)",
+       "url": "https://rating.hh.ru/poll/",
+       "position": "9",
+       "year": 2025
+      }
+     ]
+    },
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 44690,
+    "to": 58100,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 44690,
+    "perModeTo": 58100,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795837898,
+    "$": "2026-11-28T06:51:38.247+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 6508803,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "5-я Северная",
+    "building": "192",
+    "displayName": "Омск, 5-я Северная, 192",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.0066426,\"lng\":73.3815945,\"zoom\":14},\"marker\":{\"lat\":55.0066426,\"lng\":73.3815945}}}",
+    "marker": {
+     "@lat": 55.0066426,
+     "@lng": 73.3815945
+    },
+    "manager": {
+     "@id": 5220527
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "contactInfo": null,
+   "template": "makeup:43859",
+   "creationSite": "hh.ru",
+   "creationSiteId": 1,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795838764,
+    "$": "2026-11-28T07:06:04.932+03:00"
+   },
+   "creationTime": "2026-11-28T06:51:38.247+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945610",
+    "mobile": "https://m.hh.ru/vacancy/139945610"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {
+     "workingTimeInterval": [
+      "FROM_FOUR_TO_SIX_HOURS_IN_A_DAY"
+     ]
+    }
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191438,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191440,
+        "propertyType": "ZP_PROMO",
+        "defining": true,
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115729"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191437,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191439,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115728"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191443,
+        "propertyType": "ZP_ACCESSIBLE",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-99"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191442,
+        "propertyType": "ZP_CROSSPOSTING",
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "zpPublicationTimeIso",
+            "value": "2026-11-28T06:51:38.731659199+03:00"
+           },
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115729"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       },
+       {
+        "id": 750191441,
+        "propertyType": "ZP_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "65115729"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:51:38.247+03:00",
+        "endTimeIso": "2026-12-28T06:51:38.247+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedTo": [
+       "ZP"
+      ],
+      "filteredPropertyNames": [
+       "HH_STANDARD",
+       "ZP_CROSSPOSTING",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_RESUME_GIFTS",
+       "ZP_ACCESSIBLE"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     },
+     "ZP": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedFrom": "HH",
+      "filteredPropertyNames": [
+       "ZP_PROMO",
+       "ZP_SEARCH_RESULTS_NORMAL_POSITION",
+       "ZP_CROSSPOSTING",
+       "ZP_ACCESSIBLE"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Промо"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH",
+    "ZP"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "PART"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "PART",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF",
+      "TWO_ON_TWO_OFF",
+      "WEEKEND"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_4",
+      "HOURS_5",
+      "HOURS_6"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": false,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "branding": {
+    "type": "MAKEUP"
+   },
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 0,
+   "online_users_count": 1,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    },
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 15
+  },
+  {
+   "@workSchedule": "flyInFlyOut",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 137082795,
+   "name": "Оператор производственной линии",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 4519239,
+    "name": "БИС-СЕРВИС",
+    "visibleName": "БИС-СЕРВИС",
+    "employerOrganizationFormId": 0,
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 137000,
+    "to": 180000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 137000,
+    "perModeTo": 180000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795837197,
+    "$": "2026-11-28T06:39:57.242+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": true,
+   "address": {
+    "@id": 5275056,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Нижневартовск",
+    "street": "Индустриальная улица",
+    "building": "111Дп2",
+    "displayName": "Нижневартовск, Индустриальная улица, 111Дп2",
+    "mapData": "{\"points\":{\"center\":{\"lat\":60.96322399996378,\"lng\":76.52341899999998,\"zoom\":21},\"marker\":{\"lat\":60.963224,\"lng\":76.523419}}}",
+    "marker": {
+     "@lat": 60.963224,
+     "@lng": 76.523419
+    },
+    "manager": {
+     "@id": 6598869
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "ekaterinburg.hh.ru",
+   "creationSiteId": 9,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795837434,
+    "$": "2026-11-28T06:43:54.593+03:00"
+   },
+   "creationTime": "2026-09-08T06:39:44.726+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/137082795",
+    "mobile": "https://m.hh.ru/vacancy/137082795"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 733657181,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68572718"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-07T06:39:57.234+03:00",
+        "endTimeIso": "2026-12-07T06:39:57.234+03:00"
+       },
+       {
+        "id": 733657182,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68572718"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T06:39:57.234+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-07T06:39:57.234+03:00",
+        "endTimeIso": "2026-12-07T06:39:57.234+03:00"
+       },
+       {
+        "id": 735763342,
+        "propertyType": "HH_MONETIZATION_PERFORMANCE_BAD",
+        "bundle": "HH",
+        "propertyWeight": 1500,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actionReason",
+            "value": "POOR_VACANCY_CONVERSION_TO_RR"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_MONETIZATION_PERFORMANCE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-200"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-11T06:37:32.75259+03:00"
+       },
+       {
+        "id": 733657183,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68572718"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-07T06:39:57.234+03:00",
+        "endTimeIso": "2026-12-07T06:39:57.234+03:00"
+       },
+       {
+        "id": 733657179,
+        "propertyType": "HH_RESUME_RECOMMENDATIONS_IGNORE_AREA",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68572718"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-07T06:39:57.234+03:00"
+       },
+       {
+        "id": 733657180,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68572718"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-07T06:39:57.234+03:00",
+        "endTimeIso": "2026-12-07T06:39:57.234+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_MONETIZATION_PERFORMANCE_BAD",
+       "HH_RESUME_RECOMMENDATIONS_IGNORE_AREA",
+       "HH_STANDARD_PLUS",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_AUTO_RENEWAL",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      85
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FLY_IN_FLY_OUT",
+   "flyInFlyOutDurations": [
+    {
+     "flyInFlyOutDurationsElement": [
+      "DAYS_30"
+     ]
+    }
+   ],
+   "internship": false,
+   "nightShifts": true,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "OTHER"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_11"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {
+     "civilLawContractsElement": [
+      "SELF_EMPLOYED",
+      "INDIVIDUAL_ENTREPRENEUR",
+      "INDIVIDUAL_PERSON"
+     ]
+    }
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 17,
+   "totalResponsesCount": 54,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-label-work-schedule-flyInFlyOut",
+     "text": "Вахта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 16
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945564,
+   "name": "Продавец",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@structureName": "mag",
+    "@state": "APPROVED",
+    "id": 49357,
+    "name": "МАГНИТ, Розничная сеть",
+    "visibleName": "МАГНИТ, Розничная сеть. Магазины продуктов",
+    "structureName": "mag",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1395726.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7202686.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7202687.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7202687.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7202688.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7202688.png"
+      }
+     ],
+     "@showInSearch": true
+    },
+    "department": {
+     "@name": "МАГНИТ, Розничная сеть. Магазины продуктов",
+     "@code": "mag-49357-product"
+    },
+    "mainEmployerId": 49357,
+    "badges": {
+     "badge": [
+      {
+       "type": "employer-hh-rating",
+       "description": "Топ-30 в Рейтинге работодателей России (крупнейшие компании)",
+       "url": "https://rating.hh.ru/poll/",
+       "position": "28",
+       "year": 2025
+      }
+     ]
+    },
+    "companySiteUrl": "https://rabota.magnit.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 37800,
+    "to": 52300,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 37800,
+    "perModeTo": 52300,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795837028,
+    "$": "2026-11-28T06:37:08.787+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 11722540,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "Архитекторов",
+    "building": "1 к 5",
+    "displayName": "Омск, Архитекторов, 1 к 5",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.9924751,\"lng\":73.3121019,\"zoom\":14},\"marker\":{\"lat\":54.9924751,\"lng\":73.3121019}}}",
+    "marker": {
+     "@lat": 54.9924751,
+     "@lng": 73.3121019
+    },
+    "manager": {
+     "@id": 11133301
+    },
+    "districtDto": {
+     "id": 183,
+     "isMicroDistrict": false,
+     "name": "Кировский"
+    }
+   },
+   "contactInfo": null,
+   "template": "makeup:3783",
+   "code": "МД",
+   "creationSite": "hh.ru",
+   "creationSiteId": 1,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795838902,
+    "$": "2026-11-28T07:08:22.020+03:00"
+   },
+   "creationTime": "2026-11-28T06:37:08.787+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945564",
+    "mobile": "https://m.hh.ru/vacancy/139945564"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191231,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:08.787+03:00",
+        "endTimeIso": "2026-12-28T06:37:08.787+03:00"
+       },
+       {
+        "id": 750191229,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:08.787+03:00",
+        "endTimeIso": "2026-12-28T06:37:08.787+03:00"
+       },
+       {
+        "id": 750191230,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:08.787+03:00",
+        "endTimeIso": "2026-12-28T06:37:08.787+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_STANDARD",
+       "HH_RESUME_GIFTS"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF",
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_8",
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "branding": {
+    "type": "MAKEUP"
+   },
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 0,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    },
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 17
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945559,
+   "name": "Продавец",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@structureName": "mag",
+    "@state": "APPROVED",
+    "id": 49357,
+    "name": "МАГНИТ, Розничная сеть",
+    "visibleName": "МАГНИТ, Розничная сеть. Магазины продуктов",
+    "structureName": "mag",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1395726.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7202686.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7202687.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7202687.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7202688.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7202688.png"
+      }
+     ],
+     "@showInSearch": true
+    },
+    "department": {
+     "@name": "МАГНИТ, Розничная сеть. Магазины продуктов",
+     "@code": "mag-49357-product"
+    },
+    "mainEmployerId": 49357,
+    "badges": {
+     "badge": [
+      {
+       "type": "employer-hh-rating",
+       "description": "Топ-30 в Рейтинге работодателей России (крупнейшие компании)",
+       "url": "https://rating.hh.ru/poll/",
+       "position": "28",
+       "year": 2025
+      }
+     ]
+    },
+    "companySiteUrl": "https://rabota.magnit.ru/",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 37800,
+    "to": 52300,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 37800,
+    "perModeTo": 52300,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795837024,
+    "$": "2026-11-28T06:37:04.161+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 16464059,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "улица Багратиона",
+    "building": "4к1",
+    "displayName": "Омск, улица Багратиона, 4к1",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.021462,\"lng\":73.410217,\"zoom\":14},\"marker\":{\"lat\":55.021462,\"lng\":73.410217}}}",
+    "marker": {
+     "@lat": 55.021462,
+     "@lng": 73.410217
+    },
+    "manager": {
+     "@id": 11133301
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "contactInfo": null,
+   "template": "makeup:3783",
+   "code": "МД",
+   "creationSite": "hh.ru",
+   "creationSiteId": 1,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795838898,
+    "$": "2026-11-28T07:08:18.558+03:00"
+   },
+   "creationTime": "2026-11-28T06:37:04.161+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945559",
+    "mobile": "https://m.hh.ru/vacancy/139945559"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191216,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:04.161+03:00",
+        "endTimeIso": "2026-12-28T06:37:04.161+03:00"
+       },
+       {
+        "id": 750191214,
+        "propertyType": "HH_RESUME_GIFTS",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "giftsCount",
+            "value": "15"
+           },
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:04.161+03:00",
+        "endTimeIso": "2026-12-28T06:37:04.161+03:00"
+       },
+       {
+        "id": 750191215,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "65268170"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:37:04.161+03:00",
+        "endTimeIso": "2026-12-28T06:37:04.161+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_STANDARD",
+       "HH_RESUME_GIFTS"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF",
+      "TWO_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_8",
+      "HOURS_12"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "branding": {
+    "type": "MAKEUP"
+   },
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 0,
+   "online_users_count": 0,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    },
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 18
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945548,
+   "name": "Педагог-психолог",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 1892431,
+    "name": "БДОУ г. Омска Детский Сад № 81 Комбинированного Вида",
+    "visibleName": "БДОУ г. Омска Детский Сад № 81 Комбинированного Вида",
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 32800,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 32800,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795836331,
+    "$": "2026-11-28T06:25:31.583+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 14330865,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "Заозёрная улица",
+    "building": "15/3",
+    "displayName": "Омск, Заозёрная улица, 15/3",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.041186646547686,\"lng\":73.31478421328353,\"zoom\":16},\"marker\":{\"lat\":55.042597,\"lng\":73.316128}}}",
+    "marker": {
+     "@lat": 55.042597,
+     "@lng": 73.316128
+    },
+    "manager": {
+     "@id": 12656865
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795836331,
+    "$": "2026-11-28T06:25:31.630+03:00"
+   },
+   "creationTime": "2026-11-28T06:25:31.583+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945548",
+    "mobile": "https://m.hh.ru/vacancy/139945548"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191153,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67252908"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:25:31.583+03:00",
+        "endTimeIso": "2026-12-28T06:25:31.583+03:00"
+       },
+       {
+        "id": 750191152,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67252908"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:25:31.583+03:00",
+        "endTimeIso": "2026-12-28T06:25:31.583+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_STANDARD",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      101
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_7"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 0,
+   "online_users_count": 2,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 19
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 139945532,
+   "name": "Педагог-психолог",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 1892431,
+    "name": "БДОУ г. Омска Детский Сад № 81 Комбинированного Вида",
+    "visibleName": "БДОУ г. Омска Детский Сад № 81 Комбинированного Вида",
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 32800,
+    "currencyCode": "RUR",
+    "gross": true,
+    "perModeFrom": 32800,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795836278,
+    "$": "2026-11-28T06:24:38.988+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 14913042,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "микрорайон Заозёрный, улица Сергея Тюленина",
+    "building": "17",
+    "displayName": "Омск, микрорайон Заозёрный, улица Сергея Тюленина, 17",
+    "mapData": "{\"points\":{\"center\":{\"lat\":55.04068748694115,\"lng\":73.32090527116392,\"zoom\":20},\"marker\":{\"lat\":55.040657,\"lng\":73.320916}}}",
+    "marker": {
+     "@lat": 55.040657,
+     "@lng": 73.320916
+    },
+    "manager": {
+     "@id": 12656865
+    },
+    "districtDto": {
+     "id": 375,
+     "isMicroDistrict": false,
+     "name": "Советский"
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795836279,
+    "$": "2026-11-28T06:24:39.017+03:00"
+   },
+   "creationTime": "2026-11-28T06:24:38.988+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139945532",
+    "mobile": "https://m.hh.ru/vacancy/139945532"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 750191148,
+        "propertyType": "HH_STANDARD",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67252908"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:24:38.988+03:00",
+        "endTimeIso": "2026-12-28T06:24:38.988+03:00"
+       },
+       {
+        "id": 750191149,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 400,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "67252908"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-28T06:24:38.988+03:00",
+        "endTimeIso": "2026-12-28T06:24:38.988+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_STANDARD",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      101
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "FIVE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_7"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 0,
+   "totalResponsesCount": 0,
+   "online_users_count": 1,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-be-first",
+     "text": "Откликнитесь среди первых"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 20
+  },
+  {
+   "@workSchedule": "fullDay",
+   "@showContact": false,
+   "@responseLetterRequired": false,
+   "vacancyId": 139816953,
+   "name": "Продавец-консультант в магазины Парфюм-Лидер",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 748921,
+    "name": "Парфюм-Лидер",
+    "visibleName": "Парфюм-Лидер",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original/1399411.png"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo/7217414.png"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo/7217415.png"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo/7217415.png"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo/7217416.png"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo/7217416.png"
+      }
+     ]
+    },
+    "badges": {
+     "badge": [
+      {
+       "type": "hrbrand",
+       "description": "Победитель Премии HR-бренд",
+       "url": "http://hrbrand.ru/",
+       "position": "winner"
+      }
+     ]
+    },
+    "companySiteUrl": "http://www.parfum-lider.ru",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 44000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 44000,
+    "mode": "MONTH",
+    "frequency": "TWICE_PER_MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795835407,
+    "$": "2026-11-28T06:10:07.431+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "hr-brand": {
+    "@url": "http://hrbrand.ru/",
+    "type": "winner"
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 16482943,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "Омск",
+    "street": "",
+    "building": "",
+    "displayName": "Омск",
+    "mapData": "{\"points\":{\"center\":{\"lat\":54.9893469999789,\"lng\":73.36822099999998,\"zoom\":20},\"marker\":{\"lat\":54.989347,\"lng\":73.368221}}}",
+    "marker": {
+     "@lat": 54.989347,
+     "@lng": 73.368221
+    },
+    "manager": {
+     "@id": 6351871
+    },
+    "districtDto": {
+     "id": 340,
+     "isMicroDistrict": false,
+     "name": "Центральный"
+    }
+   },
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795837437,
+    "$": "2026-11-28T06:43:57.353+03:00"
+   },
+   "creationTime": "2026-11-25T06:10:07.431+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": false,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/139816953",
+    "mobile": "https://m.hh.ru/vacancy/139816953"
+   },
+   "acceptIncompleteResumes": false,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 747707548,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707550,
+        "propertyType": "ZP_PROMO",
+        "defining": true,
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073583"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707545,
+        "propertyType": "HH_AI_ASSISTANT",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T06:10:07.431"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707546,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T06:10:07.431+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707547,
+        "propertyType": "HH_NEURO_CALL_SUMMARY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T06:10:07.431"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707549,
+        "propertyType": "HH_NEURO_RESPONSE_ANALYZER",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T06:10:07.431"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707544,
+        "propertyType": "HH_NEURO_SURVEY",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actualEndTime",
+            "value": "2026-12-25T06:10:07.431"
+           },
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707543,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "RENEWAL_VP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073582"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707553,
+        "propertyType": "ZP_ACCESSIBLE",
+        "bundle": "ZP",
+        "propertyWeight": 80,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_ACCESSIBLE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-99"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707552,
+        "propertyType": "ZP_CROSSPOSTING",
+        "classifying": true,
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "zpPublicationTimeIso",
+            "value": "2026-11-25T06:10:07.563871438+03:00"
+           },
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073583"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       },
+       {
+        "id": 747707551,
+        "propertyType": "ZP_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "ZP",
+        "propertyWeight": 100,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "ZP_CROSSPOST"
+           },
+           {
+            "key": "serviceId",
+            "value": "68073583"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-25T06:10:07.431+03:00",
+        "endTimeIso": "2026-12-25T06:10:07.431+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedTo": [
+       "ZP"
+      ],
+      "filteredPropertyNames": [
+       "HH_AI_ASSISTANT",
+       "HH_AUTO_RENEWAL",
+       "HH_STANDARD_PLUS",
+       "HH_NEURO_RESPONSE_ANALYZER",
+       "HH_NEURO_CALL_SUMMARY",
+       "HH_NEURO_SURVEY",
+       "ZP_ACCESSIBLE",
+       "ZP_CROSSPOSTING",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD_PLUS"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Стандарт плюс"
+     },
+     "ZP": {
+      "advertising": false,
+      "anonymous": false,
+      "crosspostedFrom": "HH",
+      "filteredPropertyNames": [
+       "ZP_SEARCH_RESULTS_NORMAL_POSITION",
+       "ZP_ACCESSIBLE",
+       "ZP_PROMO",
+       "ZP_CROSSPOSTING"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": false,
+      "premium": false,
+      "standard": true,
+      "standardPlus": false,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.STANDARD"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Промо"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH",
+    "ZP"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      97
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "FULL"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "FULL",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "OTHER"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "OTHER"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": false
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "contactInfo": null,
+   "userLabels": [],
+   "responsesCount": 111,
+   "totalResponsesCount": 118,
+   "online_users_count": 6,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    },
+    {
+     "id": "vacancy-serp__vacancy-compensation-frequency-TWICE_PER_MONTH",
+     "text": "Выплаты: Два раза в месяц"
+    }
+   ],
+   "labels": [],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 21
+  },
+  {
+   "@workSchedule": "shift",
+   "@showContact": true,
+   "@responseLetterRequired": false,
+   "vacancyId": 138452799,
+   "name": "Охранник",
+   "company": {
+    "@showSimilarVacancies": true,
+    "@trusted": true,
+    "@category": "COMPANY",
+    "@countryId": 1,
+    "@employerWithSpecificCountryLaws": false,
+    "@state": "APPROVED",
+    "id": 4446328,
+    "name": "ЧОП Вега",
+    "visibleName": "ЧОП Вега",
+    "logos": {
+     "logo": [
+      {
+       "@type": "ORIGINAL",
+       "@url": "/employer-logo-original-round/3270383.jpeg"
+      },
+      {
+       "@type": "employerPage",
+       "@url": "/employer-logo-round/3270383.jpeg"
+      },
+      {
+       "@type": "searchResultsPage",
+       "@url": "/employer-logo-round/3270384.jpeg"
+      },
+      {
+       "@type": "small",
+       "@url": "/employer-logo-round/3270384.jpeg"
+      },
+      {
+       "@type": "vacancyPage",
+       "@url": "/employer-logo-round/3270385.jpeg"
+      },
+      {
+       "@type": "medium",
+       "@url": "/employer-logo-round/3270385.jpeg"
+      }
+     ]
+    },
+    "employerOrganizationFormId": 0,
+    "companySiteUrl": "",
+    "accreditedITEmployer": false,
+    "employerOnAdditionalCheck": false
+   },
+   "compensation": {
+    "from": 32000,
+    "to": 38000,
+    "currencyCode": "RUR",
+    "gross": false,
+    "perModeFrom": 32000,
+    "perModeTo": 38000,
+    "mode": "MONTH"
+   },
+   "publicationTime": {
+    "@timestamp": 1795835175,
+    "$": "2026-11-28T06:06:15.590+03:00"
+   },
+   "area": {
+    "@id": 68,
+    "name": "Омск",
+    "path": ".113.222.1249.68."
+   },
+   "acceptTemporary": false,
+   "address": {
+    "@id": 31045174,
+    "@disabled": false,
+    "@wrong": false,
+    "city": "село Бала-Чычкан",
+    "displayName": "село Бала-Чычкан",
+    "mapData": "{\"points\":{\"center\":{\"lng\":72.91700600000001,\"lat\":41.9011990000268,\"zoom\":17},\"marker\":{\"lng\":72.917006,\"lat\":41.901199}}}",
+    "marker": {
+     "@lat": 41.901199,
+     "@lng": 72.917006
+    },
+    "manager": {
+     "@id": 5564204
+    }
+   },
+   "contactInfo": null,
+   "creationSite": "novosibirsk.hh.ru",
+   "creationSiteId": 14,
+   "displayHost": "omsk.hh.ru",
+   "lastChangeTime": {
+    "@timestamp": 1795837434,
+    "$": "2026-11-28T06:43:54.531+03:00"
+   },
+   "creationTime": "2026-10-14T06:06:09.524+03:00",
+   "canBeShared": true,
+   "employerManager": {},
+   "inboxPossibility": true,
+   "chatWritePossibility": "ENABLED_AFTER_INVITATION",
+   "notify": true,
+   "links": {
+    "desktop": "https://omsk.hh.ru/vacancy/138452799",
+    "mobile": "https://m.hh.ru/vacancy/138452799"
+   },
+   "acceptIncompleteResumes": true,
+   "driverLicenseTypes": [
+    {}
+   ],
+   "languages": [
+    {}
+   ],
+   "workingDays": [
+    {}
+   ],
+   "workingTimeIntervals": [
+    {}
+   ],
+   "workingTimeModes": [
+    {}
+   ],
+   "vacancyProperties": {
+    "properties": [
+     {
+      "property": [
+       {
+        "id": 737645394,
+        "propertyType": "HH_STANDARD_PLUS",
+        "defining": true,
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68506081"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T06:06:15.582+03:00",
+        "endTimeIso": "2026-12-13T06:06:15.582+03:00"
+       },
+       {
+        "id": 737645396,
+        "propertyType": "HH_AUTO_RENEWAL",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "intervalMinutes",
+            "value": "4320"
+           },
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68506081"
+           },
+           {
+            "key": "nextActivationTimeIso",
+            "value": "2026-12-01T06:06:15.582+03:00"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T06:06:15.582+03:00",
+        "endTimeIso": "2026-12-13T06:06:15.582+03:00"
+       },
+       {
+        "id": 744853912,
+        "propertyType": "HH_MONETIZATION_PERFORMANCE_BAD",
+        "bundle": "HH",
+        "propertyWeight": 1500,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "actionReason",
+            "value": "POOR_VACANCY_CONVERSION_TO_RR"
+           },
+           {
+            "key": "packageName",
+            "value": "HH_MONETIZATION_PERFORMANCE"
+           },
+           {
+            "key": "serviceId",
+            "value": "-200"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-21T12:31:01.198522+03:00"
+       },
+       {
+        "id": 737645395,
+        "propertyType": "HH_PAY_FOR_PERFORMANCE",
+        "classifying": true,
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68506081"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T06:06:15.582+03:00",
+        "endTimeIso": "2026-12-13T06:06:15.582+03:00"
+       },
+       {
+        "id": 737645393,
+        "propertyType": "HH_SEARCH_RESULTS_NORMAL_POSITION",
+        "bundle": "HH",
+        "propertyWeight": 600,
+        "parameters": [
+         {
+          "parameter": [
+           {
+            "key": "packageName",
+            "value": "VPP_PFP"
+           },
+           {
+            "key": "serviceId",
+            "value": "68506081"
+           }
+          ]
+         }
+        ],
+        "startTimeIso": "2026-11-13T06:06:15.582+03:00",
+        "endTimeIso": "2026-12-13T06:06:15.582+03:00"
+       }
+      ]
+     }
+    ],
+    "calculatedStates": {
+     "HH": {
+      "advertising": false,
+      "anonymous": false,
+      "filteredPropertyNames": [
+       "HH_MONETIZATION_PERFORMANCE_BAD",
+       "HH_STANDARD_PLUS",
+       "HH_SEARCH_RESULTS_NORMAL_POSITION",
+       "HH_PAY_FOR_PERFORMANCE",
+       "HH_AUTO_RENEWAL"
+      ],
+      "free": false,
+      "inPlatformCommunication": false,
+      "optimum": false,
+      "optionPremium": false,
+      "payForPerformance": true,
+      "premium": false,
+      "standard": false,
+      "standardPlus": true,
+      "translationKeys": [
+       "employer.VacancyCreate.PublicationType.HH_STANDARD_PLUS-HH_PAY_FOR_PERFORMANCE"
+      ],
+      "virtualRecruiter": false,
+      "translation": "Оплата за контакты"
+     }
+    }
+   },
+   "vacancyPlatforms": [
+    "HH"
+   ],
+   "professionalRoleIds": [
+    {
+     "professionalRoleId": [
+      90
+     ]
+    }
+   ],
+   "workExperience": "noExperience",
+   "employment": {
+    "@type": "PART"
+   },
+   "closedForApplicants": false,
+   "userTestPresent": false,
+   "employmentForm": "PART",
+   "flyInFlyOutDurations": [
+    {}
+   ],
+   "internship": false,
+   "nightShifts": false,
+   "workFormats": [
+    {
+     "workFormatsElement": [
+      "ON_SITE"
+     ]
+    }
+   ],
+   "workScheduleByDays": [
+    {
+     "workScheduleByDaysElement": [
+      "ONE_ON_TWO_OFF"
+     ]
+    }
+   ],
+   "workingHours": [
+    {
+     "workingHoursElement": [
+      "HOURS_24"
+     ]
+    }
+   ],
+   "experimentalModes": [
+    {
+     "experimentalMode": [
+      "newContractFields",
+      "newEmploymentTerms",
+      "ageRestrictions",
+      "usingNewInclusivenessFields",
+      "newCompensationModes"
+     ]
+    }
+   ],
+   "acceptLaborContract": true,
+   "civilLawContracts": [
+    {}
+   ],
+   "autoResponse": {
+    "acceptAutoResponse": true
+   },
+   "inclusivenessTypes": [
+    {}
+   ],
+   "userLabels": [],
+   "responsesCount": 2,
+   "totalResponsesCount": 17,
+   "online_users_count": 1,
+   "tags": [
+    {
+     "id": "vacancy-serp__vacancy-work-experience-noExperience",
+     "text": "Без опыта"
+    }
+   ],
+   "labels": [
+    {
+     "id": "vacancy-label-no-resume",
+     "text": "Можно без резюме"
+    }
+   ],
+   "extraLabels": [],
+   "searchRid": "179584465098269e47f3738718ede000",
+   "positionInRequest": 22
+  }
+ ]
+}

@@ -9,6 +9,7 @@ meta:
 
 build:
   requirementsPath: requirements.txt
+  useCache: true
 
 run:
   # main.py сам добавляет src/ в sys.path: команда не зависит от shell и PYTHONPATH.
@@ -16,3 +17,10 @@ run:
   command: python main.py
   # Постоянный диск. Без него база вакансий и FSM обнуляются при каждом деплое.
   persistenceMount: /data
+  # Бот живёт на long polling и порт не слушает; поле нужно, чтобы панель
+  # не считала контейнер нездоровым. singleton — одна копия, иначе два
+  # поллинга делят обновления, zeroDowntime — не нужен для одного процесса.
+  containerPort: 80
+  singleton: true
+  zeroDowntime: false
+  russianTrustedCa: false

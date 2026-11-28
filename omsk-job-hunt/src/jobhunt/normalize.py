@@ -153,3 +153,65 @@ def from_trudvsem(vac: dict) -> Vacancy:
         lat=_coord(addresses[0].get("lat")) if addresses else None,
         lng=_coord(addresses[0].get("lng")) if addresses else None,
     )
+
+# hh отдаёт опыт кодовым значением, а не подписью: приводим к формату SuperJob,
+# иначе фильтр allowed_experience в filters.py не совпадёт.
+HH_EXPERIENCE = {
+    "noExperience": "Без опыта",
+    "between1And3": "От 1 года",
+    "between3And6": "От 3 лет",
+    "moreThan6": "От 6 лет",
+}
+
+# hh шифрует валюты своими кодами: RUR — это рубль до 2007 года.
+HH_CURRENCY = {"RUR": "RUB", "UAH": "UAH", "USD": "USD", "EUR": "EUR", "KZT": "KZT"}
+
+
+def _hh_formats(raw: Any) -> list[str]:
+    """workFormats приходит списком {'workFormatsElement': ['REMOTE', ...]}."""
+    formats: list[str] = []
+    for block in raw or []:
+        if isinstance(block, dict):
+            formats.extend(str(item) for item in block.get("workFormatsElement") or [])
+    return formats
+
+
+def _hh_currency(code: Any) -> str:
+    code = str(code or "RUR").upper()
+    return HH_CURRENCY.get(code, code)
+
+
+def from_hh(obj: dict) -> Vacancy:
+    """Карточка выдачи hh.ru: описания в ней нет, только заголовок и компания."""
+    company = obj.get("company") or {}
+    compensation = obj.get("compensation") or {}
+    area = obj.get("area") or {}
+    address = obj.get("address") or {}
+    marker = address.get("marker") or {}
+    links = obj.get("links") or {}
+    published = obj.get("publicationTime") or {}
+    vacancy_id = obj["vacancyId"]
+    title = (obj.get("name") or "").strip()
+    address_text = address.get("displayName") or ""
+    if not isinstance(published, dict):
+        published = {}
+    return Vacancy(
+        key=f"hh:{vacancy_id}",
+        source="hh",
+        source_id=str(vacancy_id),
+        title=title,
+        company=company.get("visibleName") or company.get("name") or None,
+        salary_from=_money(compensation.get("from")),
+        salary_to=_money(compensation.get("to")),
+        currency=_hh_currency(compensation.get("currencyCode")),
+        city=area.get("name") or None,
+        district=_district(f"{address_text} {title}"),
+        is_remote="REMOTE" in _hh_formats(obj.get("workFormats")),
+        experience=HH_EXPERIENCE.get(str(obj.get("workExperience") or "")),
+        url=links.get("desktop") or f"https://hh.ru/vacancy/{vacancy_id}",
+        published_at=_iso_date(published.get("@timestamp")),
+        description=None,
+        lat=_coord(marker.get("@lat")),
+        lng=_coord(marker.get("@lng")),
+    )
+
