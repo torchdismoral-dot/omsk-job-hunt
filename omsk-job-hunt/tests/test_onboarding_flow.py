@@ -280,12 +280,28 @@ def test_reset_settings_deletes_prefs_and_restarts_onboarding(tmp_path):
 
 
 def test_empty_feed_is_sent_once_with_advice_and_settings_button(tmp_path):
+    """База полна, но под фильтры ничего не подошло — совет про фильтры."""
     from jobhunt.db import UserSettings
+    from jobhunt.normalize import Vacancy
 
     bot = RecordingBot()
     dispatcher, db_path = make_dispatcher(tmp_path)
     db = DB(db_path)
     db.save_user_settings(UserSettings(user_id=777))
+    db.upsert(
+        Vacancy(
+            key="superjob:1",
+            source="superjob",
+            source_id="1",
+            title="Оператор",
+            company="ООО",
+            salary_from=60000,
+            currency="RUB",
+            city="Москва",
+            url="https://example.org/1",
+            published_at="2026-11-25",
+        )
+    )
     db.close()
 
     async def run():
@@ -302,6 +318,25 @@ def test_empty_feed_is_sent_once_with_advice_and_settings_button(tmp_path):
     assert "• Заглянуть позже (база обновляется каждые 48 часов)" in text
     callbacks = [button.callback_data for row in markup.inline_keyboard for button in row]
     assert callbacks == ["settings"]
+
+
+def test_empty_database_says_so_instead_of_blaming_filters(tmp_path):
+    """Пустая база — это не «узкие фильтры»: текст должен вести себя иначе."""
+    from jobhunt.db import UserSettings
+
+    bot = RecordingBot()
+    dispatcher, db_path = make_dispatcher(tmp_path)
+    db = DB(db_path)
+    db.save_user_settings(UserSettings(user_id=777))
+    db.close()
+
+    async def run():
+        await dispatcher.feed_update(bot, callback_update(bot, 1, "top:salary"))
+
+    asyncio.run(run())
+    texts = [text for _, text, _ in bot.sent]
+    assert any("База пока пустая" in text for text in texts)
+    assert not any("По твоим фильтрам пока пусто" in text for text in texts)
 
 
 def test_menu_shows_digest_state_and_toggle_turns_it_off(tmp_path):

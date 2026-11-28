@@ -11,7 +11,7 @@ from aiogram.types import CallbackQuery, Message
 from ..config import Settings
 from ..db import DB, UserSettings
 from ..filters import SPHERES
-from .feed import send_slice
+from .feed import load, send_slice
 from .keyboards import (
     SALARY_CHOICES,
     location_keyboard,
@@ -118,11 +118,16 @@ def build_onboarding_router(settings: Settings, db_path: str) -> Router:
         db = DB(db_path)
         try:
             db.save_user_settings(prefs)
+            found = load(db, settings, prefs, "date")
         finally:
             db.close()
         await state.clear()
-        await message.answer(summary(prefs), reply_markup=main_menu_keyboard(prefs.digest_enabled))
-        await send_slice(message, settings, db_path, "date", 0, prefs, limit=5)
+        await message.answer(
+            summary(prefs, has_vacancies=bool(found)),
+            reply_markup=main_menu_keyboard(prefs.digest_enabled),
+        )
+        if found:
+            await send_slice(message, settings, db_path, "date", 0, prefs, limit=5)
 
     @router.message(CommandStart())
     async def start(message: Message, state: FSMContext) -> None:

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -98,6 +99,29 @@ def _words(raw) -> tuple[str, ...]:
     return tuple(str(word) for word in values)
 
 
+PERSISTENCE_PREFIX = "/data/"
+
+
+def persistence_warning(db_path: str, container: bool | None = None) -> str | None:
+    """Текст предупреждения, если файл базы не на постоянном диске.
+
+    Актуально только для Linux-контейнера: на Amvera каталог приложения
+    пересоздаётся при каждой сборке, и база вне /data молча обнуляется после
+    деплоя. На рабочей машине за относительным путём тоже может лежать база,
+    поэтому там молчим.
+    """
+    if container is None:
+        container = os.sep == "/"
+    if not container:
+        return None
+    if db_path == ":memory:" or db_path.startswith(PERSISTENCE_PREFIX):
+        return None
+    return (
+        f"JOBHUNT_DB={db_path!r}: база не в {PERSISTENCE_PREFIX} — файл сотрётся "
+        "при пересборке образа, задай JOBHUNT_DB=/data/jobhunt.db"
+    )
+
+
 class DB:
     def __init__(self, path: str | Path = "jobhunt.db"):
         self.path = str(path)
@@ -136,6 +160,15 @@ class DB:
                 """INSERT OR IGNORE INTO sent_vacancies (user_id, vacancy_id, sent_at)
                    SELECT chat_id, vacancy_key, sent_at FROM sent"""
             )
+
+        run_columns = {row[1] for row in self.conn.execute("PRAGMA table_info(runs)")}
+        for column, decl in (
+            ("relevant", "INTEGER"),
+            ("total", "INTEGER"),
+            ("sources", "TEXT"),
+        ):
+            if column not in run_columns:
+                self.conn.execute(f"ALTER TABLE runs ADD COLUMN {column} {decl}")
 
     def upsert(self, vacancy: Vacancy) -> bool:
         """True, если вакансия встретилась впервые."""
@@ -323,6 +356,43 @@ class DB:
 
     def users_count(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM user_settings").fetchone()[0]
+
+    def count_by_source(self) -> dict[str, int]:
+        rows = self.conn.execute(
+            "SELECT source, COUNT(*) FROM vacancies GROUP BY source ORDER BY source"
+        ).fetchall()
+        return {row[0]: row[1] for row in rows}
+
+    def record_run(self, stats: dict, started_at: str | None = None) -> None:
+        """Пишет прогон в runs: по /stats видно, когда собирали и что упало."""
+        errors = stats.get("errors") or {}
+        if stats.get("hh_error"):
+            errors.setdefault("hh", stats["hh_error"])
+        sources = {
+            name: stats.get(f"{name}_fetched")
+            for name in ("superjob", "trudvsem", "hh")
+            if f"{name}_fetched" in stats
+        }
+        self.conn.execute(
+            """INSERT INTO runs
+               (started_at, finished_at, fetched, fresh, error, relevant, total, sources)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+            (
+                started_at or _now(),
+                _now(),
+                stats.get("fetched"),
+                stats.get("fresh"),
+                "; ".join(errors.values()) or None,
+                stats.get("relevant"),
+                stats.get("total"),
+                json.dumps(sources, ensure_ascii=False),
+            ),
+        )
+        self.conn.commit()
+
+    def last_run(self) -> dict | None:
+        row = self.conn.execute("SELECT * FROM runs ORDER BY id DESC LIMIT 1").fetchone()
+        return dict(row) if row else None
 
     def count(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM vacancies").fetchone()[0]

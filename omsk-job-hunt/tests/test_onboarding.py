@@ -93,6 +93,14 @@ def test_stop_words_label_empty():
     assert stop_words_label(()) == "ничего"
 
 
+def test_summary_without_results_does_not_promise_vacancies():
+    prefs = UserSettings(user_id=1, city="Омск", remote=False, min_salary=40000)
+    text = summary(prefs, has_vacancies=False)
+    assert "Вот первые 5 вакансий:" not in text
+    assert "загляни через пару минут" in text
+    assert "Настройки сохранены!" in text
+
+
 def test_main_menu_has_settings_button():
     keyboard = main_menu_keyboard()
     assert callbacks(keyboard)[:3] == ["top:date", "top:salary", "top:distance"]

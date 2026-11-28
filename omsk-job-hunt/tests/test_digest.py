@@ -155,3 +155,79 @@ def test_refresh_job_swallows_errors(tmp_path):
         raise RuntimeError("нет сети")
 
     assert asyncio.run(refresh_job(Settings(), path, refresh_fn=broken)) is None
+
+
+def test_ensure_database_skips_when_base_is_filled(tmp_path):
+    """База с данными — автосбор не нужен, он только трафик жрёт."""
+    from jobhunt.bot.app import ensure_database
+
+    path = str(tmp_path / "t.db")
+    db = DB(path)
+    db.upsert(V(1))
+    db.close()
+
+    def never_called(settings, db):
+        raise AssertionError("автосбор не должен запускаться")
+
+    assert asyncio.run(
+        ensure_database(Settings(), path, refresh_fn=never_called, delay=0)
+    ) is None
+
+
+def test_ensure_database_collects_when_base_pusta(tmp_path):
+    """Пустая база после деплоя наполняется сразу, а не к 9 утра завтра."""
+    from jobhunt.bot.app import ensure_database
+
+    path = str(tmp_path / "t.db")
+    calls = []
+
+    def fake_refresh(settings, db):
+        calls.append(1)
+        db.upsert(V(1))
+        return {"fetched": 1, "fresh": 1, "total": 1}
+
+    stats = asyncio.run(ensure_database(Settings(), path, refresh_fn=fake_refresh, delay=0))
+    assert calls == [1]
+    assert stats["total"] == 1
+
+
+def test_ensure_database_rechecks_after_first_attempt(tmp_path):
+    """Первый прогон ничего не принёс — пробуем ещё раз, не выходя за лимит."""
+    from jobhunt.bot.app import ensure_database
+
+    path = str(tmp_path / "t.db")
+    calls = []
+
+    def empty_refresh(settings, db):
+        calls.append(1)
+        return {"fetched": 0, "fresh": 0, "total": 0}
+
+    stats = asyncio.run(
+        ensure_database(Settings(), path, refresh_fn=empty_refresh, delay=0,
+                        attempts=3, retry_delay=0)
+    )
+    assert stats["total"] == 0
+    assert len(calls) == 3
+
+
+def test_ensure_database_gives_up_without_raising(tmp_path):
+    """Автосбор не должен ронять бота, если источники молчат."""
+    from jobhunt.bot.app import ensure_database
+
+    path = str(tmp_path / "t.db")
+
+    def broken(settings, db):
+        raise RuntimeError("нет сети")
+
+    stats = asyncio.run(
+        ensure_database(Settings(), path, refresh_fn=broken, delay=0,
+                        attempts=2, retry_delay=0)
+    )
+    assert stats is None
+
+
+def test_bootstrap_delay_is_short():
+    """Стартовый сбор не должен ждать час-полтора."""
+    from jobhunt.bot.app import BOOTSTRAP_DELAY
+
+    assert BOOTSTRAP_DELAY <= 30

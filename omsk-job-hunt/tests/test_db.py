@@ -1,4 +1,5 @@
-from jobhunt.db import DB, UserSettings
+from jobhunt.db import DB, UserSettings, persistence_warning
+import json
 from jobhunt.normalize import Vacancy
 
 
@@ -272,3 +273,96 @@ def test_add_donation_ignores_repeated_charge(tmp_path):
     db.close()
     assert count == 2
     assert total == 550
+
+
+def test_count_by_source(tmp_path):
+    db = DB(tmp_path / "c.db")
+    db.upsert(V("superjob:1"))
+    db.upsert(V("superjob:2"))
+    db.upsert(V("hh:1", source="hh"))
+    counts = db.count_by_source()
+    db.close()
+    assert counts == {"superjob": 2, "hh": 1}
+
+
+def test_count_by_source_on_empty_database(tmp_path):
+    db = DB(tmp_path / "e.db")
+    assert db.count_by_source() == {}
+    db.close()
+
+
+def test_record_run_stores_history(tmp_path):
+    db = DB(tmp_path / "r.db")
+    stats = {
+        "fetched": 10, "relevant": 8, "fresh": 3, "total": 100,
+        "superjob_fetched": 6, "trudvsem_fetched": 0, "hh_fetched": 4,
+        "errors": {"trudvsem": "trudvsem: HTTP 500"},
+    }
+    db.record_run(stats, "2026-11-28T09:00:00+00:00")
+    run = db.last_run()
+    db.close()
+    assert run["started_at"] == "2026-11-28T09:00:00+00:00"
+    assert run["fetched"] == 10
+    assert run["fresh"] == 3
+    assert run["total"] == 100
+    assert "trudvsem" in run["error"]
+    assert json.loads(run["sources"]) == {"superjob": 6, "trudvsem": 0, "hh": 4}
+
+
+def test_last_run_returns_most_recent(tmp_path):
+    db = DB(tmp_path / "r2.db")
+    db.record_run({"fetched": 1, "fresh": 1, "total": 1}, "2026-11-27T09:00:00+00:00")
+    db.record_run({"fetched": 2, "fresh": 1, "total": 2}, "2026-11-28T09:00:00+00:00")
+    run = db.last_run()
+    db.close()
+    assert run["started_at"] == "2026-11-28T09:00:00+00:00"
+
+
+def test_last_run_is_none_without_history(tmp_path):
+    db = DB(tmp_path / "n.db")
+    assert db.last_run() is None
+    db.close()
+
+
+def test_old_runs_table_grows_new_columns(tmp_path):
+    """База, созданная до счётчиков по источникам, должна достроиться."""
+    import sqlite3
+
+    path = tmp_path / "old.db"
+    conn = sqlite3.connect(path)
+    conn.execute(
+        """CREATE TABLE runs (
+             id INTEGER PRIMARY KEY AUTOINCREMENT,
+             started_at TEXT, finished_at TEXT,
+             fetched INTEGER, fresh INTEGER, error TEXT)"""
+    )
+    conn.commit()
+    conn.close()
+
+    db = DB(path)
+    db.record_run({"fetched": 5, "fresh": 2, "total": 9,
+                   "superjob_fetched": 5, "hh_fetched": 0}, "2026-11-28T09:00:00+00:00")
+    run = db.last_run()
+    db.close()
+    assert run["total"] == 9
+    assert json.loads(run["sources"])["superjob"] == 5
+
+
+def test_persistence_warning_is_silent_on_data_disk():
+    assert persistence_warning("/data/jobhunt.db", container=True) is None
+
+
+def test_persistence_warning_is_silent_for_memory_database():
+    assert persistence_warning(":memory:", container=True) is None
+
+
+def test_persistence_warning_flags_ephemeral_paths():
+    for path in ("jobhunt.db", "/app/jobhunt.db", "./var/jobhunt.db"):
+        warning = persistence_warning(path, container=True)
+        assert warning is not None
+        assert "JOBHUNT_DB" in warning
+
+
+def test_persistence_warning_silent_outside_container():
+    """На рабочей машине путь вне /data — норма, пугать деплоем не нужно."""
+    assert persistence_warning("jobhunt.db", container=False) is None

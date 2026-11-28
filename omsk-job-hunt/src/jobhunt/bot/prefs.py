@@ -100,11 +100,17 @@ def spheres_label(job_types) -> str:
     return ", ".join(labels) or "все"
 
 
-def summary(prefs) -> str:
+def summary(prefs, has_vacancies: bool = True) -> str:
+    """Итог настроек. Хвост зависит от того, нашлось ли что-то под них."""
+    tail = (
+        "Вот первые 5 вакансий:"
+        if has_vacancies
+        else "Пока пусто — база наполняется, загляни через пару минут."
+    )
     return (
         f"Настройки сохранены! Ищу: {location_label(prefs.city, prefs.remote)}, "
         f"сферы: {spheres_label(prefs.job_types)}, "
         f"ЗП от {format_salary(prefs.min_salary)}, "
         f"исключаю: {stop_words_label(prefs.stop_words)}. "
-        "Вот первые 5 вакансий:"
+        + tail
     )

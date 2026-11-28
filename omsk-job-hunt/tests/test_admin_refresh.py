@@ -122,7 +122,9 @@ def test_refresh_failure_is_reported(tmp_path, monkeypatch):
     dispatcher = Dispatcher()
     dispatcher.include_router(build_router(Settings(admin_id=ADMIN_ID), str(tmp_path / "t.db")))
     run(bot, dispatcher, "/refresh")
-    assert bot.sent == [REFRESH_START_TEXT, REFRESH_FAILED_TEXT]
+    assert bot.sent[0] == REFRESH_START_TEXT
+    assert bot.sent[1].startswith(REFRESH_FAILED_TEXT)
+    assert "RuntimeError: SuperJob недоступен" in bot.sent[1]
 
 
 def test_summary_text_without_hh_keys_is_unchanged():
@@ -154,4 +156,97 @@ def test_admin_sees_hh_counters(tmp_path, monkeypatch):
     dispatcher.include_router(build_router(Settings(admin_id=ADMIN_ID), str(tmp_path / "t.db")))
     run(bot, dispatcher, "/refresh")
     assert "Собрано с hh.ru: 12" in bot.sent[-1]
+
+
+# --- сводка по всем источникам и /stats ---
+
+
+def test_summary_text_counts_every_source():
+    stats = {
+        "fresh": 20, "total": 462,
+        "superjob_fetched": 300, "trudvsem_fetched": 51, "hh_fetched": 283,
+    }
+    text = summary_text(stats)
+    assert "SuperJob: 300" in text
+    assert "Trudvsem: 51" in text
+    assert "Собрано с hh.ru: 283" in text
+
+
+def test_summary_text_warns_about_broken_sources():
+    stats = {
+        "fresh": 3, "total": 100,
+        "superjob_fetched": 0, "trudvsem_fetched": 0, "hh_fetched": 40,
+        "errors": {"superjob": "SuperJob: HTTP 403", "trudvsem": "trudvsem: таймаут"},
+        "hh_error": "hh: HTTP 403",
+    }
+    text = summary_text(stats)
+    assert "⚠️ SuperJob: HTTP 403" in text
+    assert "⚠️ trudvsem: таймаут" in text
+    assert text.count("⚠️ hh: HTTP 403") == 1
+
+
+def test_summary_text_mentions_broken_rows():
+    stats = {"fresh": 1, "total": 5, "broken": 2, "errors": {"db": "не сохранилось строк: 2"}}
+    assert "⚠️ не сохранилось строк: 2" in summary_text(stats)
+
+
+def test_stats_command_reports_database(tmp_path):
+    from jobhunt.db import UserSettings
+    from jobhunt.normalize import Vacancy
+
+    path = str(tmp_path / "s.db")
+    db = DB(path)
+    db.upsert(Vacancy(key="superjob:1", source="superjob", source_id="1", title="Оператор",
+                      company="ООО", salary_from=50000, currency="RUB", city="Омск",
+                      url="https://example.org/1", published_at="2026-11-25"))
+    db.upsert(Vacancy(key="hh:1", source="hh", source_id="1", title="Оператор чата",
+                      company="ООО", salary_from=55000, currency="RUB", city="Омск",
+                      url="https://hh.ru/vacancy/1", published_at="2026-11-25"))
+    db.save_user_settings(UserSettings(user_id=777))
+    db.record_run({"fetched": 2, "fresh": 2, "total": 2, "hh_error": "hh: HTTP 403"},
+                  "2026-11-28T09:00:00+00:00")
+    db.close()
+
+    bot = RecordingBot()
+    dispatcher = Dispatcher()
+    dispatcher.include_router(build_router(Settings(admin_id=ADMIN_ID), path))
+    run(bot, dispatcher, "/stats")
+
+    text = bot.sent[-1]
+    assert "Файл базы:" in text
+    assert "Всего вакансий: 2" in text
+    assert "hh.ru: 1" in text
+    assert "SuperJob: 1" in text
+    assert "Пользователей: 1" in text
+    assert "⚠️ hh: HTTP 403" in text
+
+
+def test_stats_text_warns_about_ephemeral_database_in_container(monkeypatch):
+    """На Amvera путь вне /data — это будущая пустая база, должно быть видно."""
+    from jobhunt.bot.admin import stats_text
+
+    monkeypatch.setattr("jobhunt.db.os.sep", "/")
+    text = stats_text({
+        "db_path": "jobhunt.db", "total": 0, "by_source": {}, "users": 0,
+        "donations": (0, 0), "last_run": None,
+    })
+    assert "JOBHUNT_DB" in text
+
+
+def test_stats_command_shows_empty_database(tmp_path):
+    bot = RecordingBot()
+    dispatcher = Dispatcher()
+    dispatcher.include_router(build_router(Settings(admin_id=ADMIN_ID), str(tmp_path / "e.db")))
+    run(bot, dispatcher, "/stats")
+    text = bot.sent[-1]
+    assert "Всего вакансий: 0" in text
+    assert "По источникам: пусто" in text
+    assert "Последний сбор: ещё не запускался" in text
+
+
+def test_stats_denied_for_stranger(harness):
+    bot, dispatcher, _, calls = harness
+    run(bot, dispatcher, "/stats", user=STRANGER)
+    assert bot.sent == [NO_ACCESS_TEXT]
+    assert calls == []
 
